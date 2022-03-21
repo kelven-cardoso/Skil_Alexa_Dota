@@ -1,0 +1,1658 @@
+{
+  "_version": "1",
+  "project": {
+    "_id": "61b38fbfb1a2f4001bdeb135",
+    "name": "skil kelven",
+    "teamID": "95kw7BRkOV",
+    "devVersion": "61b38fbf93cd150007c78216",
+    "platform": "alexa",
+    "platformData": {
+      "products": []
+    },
+    "members": [],
+    "image": "https://s3.amazonaws.com/com.getstoryflow.api.images/1639230305133-kisspng-t-shirt-emoji-domain-nerd-glasses-sunglasses-emoji-png-clipart-5a73fc791f9859.5779919515175507131294.png",
+    "linkType": "STRAIGHT",
+    "_version": 1,
+    "creatorID": 78718,
+    "createdAt": "2021-12-10T17:34:55.000Z"
+  },
+  "version": {
+    "_id": "61b38fbf93cd150007c78216",
+    "name": "Initial Version",
+    "projectID": "61b38fbfb1a2f4001bdeb135",
+    "variables": [
+      "imagem",
+      "nome",
+      "win",
+      "hero",
+      "partida1",
+      "partida2",
+      "hero_id",
+      "id",
+      "kill",
+      "morte",
+      "assistencia",
+      "campo",
+      "n",
+      "id_dota",
+      "img",
+      "lh",
+      "dano",
+      "danotorre"
+    ],
+    "platformData": {
+      "slots": [],
+      "intents": [
+        {
+          "key": "AMAZON.YesIntent",
+          "name": "AMAZON.YesIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.NoIntent",
+          "name": "AMAZON.NoIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.HelpIntent",
+          "name": "AMAZON.HelpIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.StopIntent",
+          "name": "AMAZON.StopIntent",
+          "slots": [],
+          "inputs": []
+        },
+        {
+          "key": "AMAZON.CancelIntent",
+          "name": "AMAZON.CancelIntent",
+          "slots": [],
+          "inputs": []
+        }
+      ],
+      "settings": {
+        "events": null,
+        "customInterface": false,
+        "session": {
+          "type": "restart"
+        },
+        "repeat": "ALL",
+        "accountLinking": null,
+        "error": null,
+        "defaultVoice": "Vitoria"
+      },
+      "publishing": {
+        "summary": "Skil dotinha ultima partida",
+        "invocations": [
+          "Abrir última partida",
+          "mostrar minha última partida",
+          "abrir minha última partida"
+        ],
+        "smallIcon": "https://s3.amazonaws.com/com.getstoryflow.api.images/1639249082244-bandeira.png",
+        "largeIcon": "https://s3.amazonaws.com/com.getstoryflow.api.images/1639249057368-bandeira.png",
+        "hasAds": false,
+        "personal": false,
+        "forExport": true,
+        "invocationName": "última partida",
+        "hasPurchase": false,
+        "forChildren": false,
+        "description": "Skil que mostra a partida mais recente do dota, e detalhes como last hit, Kill, Death, Assistenc, Se ganhou, o herói, \nserve tanto pra echo show quanto para eco dot",
+        "instructions": "Basta você colocar o ID do dota, que é visto em seu perfil do dota. \ne deixar as partida publica ativada, para buscar resultado.",
+        "privacyPolicy": "",
+        "termsAndConditions": "",
+        "keywords": "Dota 2",
+        "category": "GAME_INFO_AND_ACCESSORY",
+        "locales": [
+          "pt-BR"
+        ],
+        "updatesDescription": null
+      },
+      "status": {
+        "stage": "DEV"
+      }
+    },
+    "rootDiagramID": "61b38fbf93cd150007c78217",
+    "creatorID": 78718,
+    "prototype": {
+      "data": {
+        "name": "skil kelven",
+        "locales": [
+          "pt-BR"
+        ]
+      },
+      "model": {
+        "intents": [
+          {
+            "key": "VF.YES",
+            "name": "VF.YES",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "yes"
+              },
+              {
+                "text": "sim"
+              },
+              {
+                "text": "o sim"
+              },
+              {
+                "text": "dizer sim"
+              },
+              {
+                "text": "Yes"
+              }
+            ]
+          },
+          {
+            "key": "VF.NO",
+            "name": "VF.NO",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "no"
+              },
+              {
+                "text": "não"
+              },
+              {
+                "text": "negativa"
+              },
+              {
+                "text": "No"
+              }
+            ]
+          },
+          {
+            "key": "VF.HELP",
+            "name": "VF.HELP",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "socorro"
+              },
+              {
+                "text": "me ajude"
+              },
+              {
+                "text": "Help"
+              }
+            ]
+          },
+          {
+            "key": "VF.STOP",
+            "name": "VF.STOP",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "parar"
+              },
+              {
+                "text": "terminar"
+              },
+              {
+                "text": "impedir"
+              },
+              {
+                "text": "fazer parar"
+              },
+              {
+                "text": "Stop"
+              }
+            ]
+          },
+          {
+            "key": "VF.CANCEL",
+            "name": "VF.CANCEL",
+            "slots": [],
+            "inputs": [
+              {
+                "text": "cancelar"
+              },
+              {
+                "text": "anular"
+              },
+              {
+                "text": "suspender"
+              },
+              {
+                "text": "Cancel"
+              }
+            ]
+          }
+        ],
+        "slots": []
+      },
+      "context": {
+        "stack": [
+          {
+            "storage": {},
+            "variables": {},
+            "programID": "61b38fbf93cd150007c78217"
+          }
+        ]
+      },
+      "settings": {
+        "layout": "voice-and-visuals"
+      },
+      "platform": "alexa"
+    }
+  },
+  "diagrams": {
+    "61b38fbf93cd150007c78217": {
+      "_id": "61b38fbf93cd150007c78217",
+      "name": "ROOT",
+      "offsetX": 433.8452275947275,
+      "offsetY": 587.7111515423461,
+      "zoom": 56.666666666666636,
+      "variables": [],
+      "nodes": {
+        "5f9f562f11b31520c2a2a6de": {
+          "nodeID": "5f9f562f11b31520c2a2a6de",
+          "type": "start",
+          "coords": [
+            157.69346550659068,
+            -484.6389394279326
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "steps": [
+              "5f9f562f11b31520c2a2a6df",
+              "5f9f562f11b31520c2a2a6e0",
+              "5fde6fb05bc1c56319fad3a0"
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4ee6a9727117a3f9fc0b6",
+                "id": "5fde6fac5bc1c56319fad39b"
+              }
+            ]
+          }
+        },
+        "5f9f562f11b31520c2a2a6df": {
+          "nodeID": "5f9f562f11b31520c2a2a6df",
+          "type": "command",
+          "data": {
+            "name": "Help",
+            "next": null,
+            "ports": [],
+            "intent": "AMAZON.HelpIntent",
+            "mappings": [],
+            "diagramID": "61b38fbf93cd150007c78218"
+          }
+        },
+        "5f9f562f11b31520c2a2a6e0": {
+          "nodeID": "5f9f562f11b31520c2a2a6e0",
+          "type": "command",
+          "data": {
+            "name": "Stop",
+            "next": null,
+            "ports": [],
+            "intent": "AMAZON.StopIntent",
+            "mappings": [],
+            "diagramID": "61b38fbf93cd150007c78219"
+          }
+        },
+        "5fde6fb05bc1c56319fad3a0": {
+          "nodeID": "5fde6fb05bc1c56319fad3a0",
+          "type": "command",
+          "data": {
+            "name": "Cancel",
+            "next": null,
+            "ports": [],
+            "intent": "AMAZON.CancelIntent",
+            "mappings": [],
+            "diagramID": "61b38fbf93cd150007c78219"
+          }
+        },
+        "61b3aa137b1e62e9c8aedf10": {
+          "nodeID": "61b3aa137b1e62e9c8aedf10",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Camila",
+                "content": "Minha ultima partida foi vitoria no lado dos iluminados, jogando de {{[hero].hero}},  matei {{[kill].kill}}. morrir {{[morte].morte}}, e ajudei a matar {{[assistencia].assistencia}} "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4f26a9727117a3f9fc178",
+                "id": "61b3aa137b1e62e9c8aedf12",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1358.27538002172,
+                        -437.60273684647626
+                      ]
+                    },
+                    {
+                      "point": [
+                        1457.408455442393,
+                        -437.60273684647626
+                      ]
+                    },
+                    {
+                      "point": [
+                        1457.408455442393,
+                        -227.18850532604338
+                      ]
+                    },
+                    {
+                      "point": [
+                        1556.5415308630663,
+                        -227.18850532604338
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61b413be5ab0ee128ab914b2": {
+          "nodeID": "61b413be5ab0ee128ab914b2",
+          "type": "block",
+          "coords": [
+            1193.2754436809175,
+            -574.6027376275301
+          ],
+          "data": {
+            "name": "Vitoria Radiant",
+            "color": "green",
+            "steps": [
+              "61b3aa137b1e62e9c8aedf10"
+            ]
+          }
+        },
+        "61b414c45ab0ee128ab914c0": {
+          "nodeID": "61b414c45ab0ee128ab914c0",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Camila",
+                "content": "Minha ultima partida foi vitoria no lado dos Temidos com heroi {{[hero].hero}}, e matei {{[kill].kill}}. morrir {{[morte].morte}}, e ajudei a matar {{[assistencia].assistencia}} "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4f26a9727117a3f9fc178",
+                "id": "61b414c45ab0ee128ab914c1",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1382.0050036695566,
+                        213.74805332404702
+                      ]
+                    },
+                    {
+                      "point": [
+                        1469.2732672663114,
+                        213.74805332404702
+                      ]
+                    },
+                    {
+                      "point": [
+                        1469.2732672663114,
+                        -227.18847011345323
+                      ]
+                    },
+                    {
+                      "point": [
+                        1556.5415308630663,
+                        -227.18847011345323
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61b414c45ab0ee128ab914be": {
+          "nodeID": "61b414c45ab0ee128ab914be",
+          "type": "block",
+          "coords": [
+            1217.004998905223,
+            87.99807669051864
+          ],
+          "data": {
+            "name": "Vitoria Dire",
+            "color": "green",
+            "steps": [
+              "61b414c45ab0ee128ab914c0"
+            ]
+          }
+        },
+        "61b41a995ab0ee128ab914e2": {
+          "nodeID": "61b41a995ab0ee128ab914e2",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Vitoria",
+                "content": "Não estou conseguindo encontrar sua ultima partida. "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": null,
+                "id": "61b41a995ab0ee128ab914e4"
+              }
+            ]
+          }
+        },
+        "61b41a995ab0ee128ab914e5": {
+          "nodeID": "61b41a995ab0ee128ab914e5",
+          "type": "block",
+          "coords": [
+            333.4287003681909,
+            208.5280462502917
+          ],
+          "data": {
+            "name": "New Block 5",
+            "color": "purple",
+            "steps": [
+              "61b41a995ab0ee128ab914e2"
+            ]
+          }
+        },
+        "61b41d1c5ab0ee128ab91533": {
+          "nodeID": "61b41d1c5ab0ee128ab91533",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Camila",
+                "content": "Minha ultima partida foi Derrota no lado dos iluminados, jogando de {{[hero].hero}},  matei {{[kill].kill}}. morrir {{[morte].morte}}, e ajudei a matar {{[assistencia].assistencia}} "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4f26a9727117a3f9fc178",
+                "id": "61b41d1c5ab0ee128ab91534",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1368.36082924047,
+                        -107.55507073695078
+                      ]
+                    },
+                    {
+                      "point": [
+                        1462.451180051768,
+                        -107.55507073695078
+                      ]
+                    },
+                    {
+                      "point": [
+                        1462.451180051768,
+                        -227.18849358851332
+                      ]
+                    },
+                    {
+                      "point": [
+                        1556.5415308630663,
+                        -227.18849358851332
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61b41d1c5ab0ee128ab91531": {
+          "nodeID": "61b41d1c5ab0ee128ab91531",
+          "type": "block",
+          "coords": [
+            1203.3608237202754,
+            -244.55503937131982
+          ],
+          "data": {
+            "name": "Perdi Radiant",
+            "color": "red",
+            "steps": [
+              "61b41d1c5ab0ee128ab91533"
+            ]
+          }
+        },
+        "61b4e00af35a6fdb0496ff0b": {
+          "nodeID": "61b4e00af35a6fdb0496ff0b",
+          "type": "display",
+          "data": {
+            "type": "JSON",
+            "title": "",
+            "imageURL": "",
+            "document": "{\n\t\"type\": \"APL\",\n\t\"version\": \"1.8\",\n\t\"license\": \"Copyright 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.\\nSPDX-License-Identifier: LicenseRef-.amazon.com.-AmznSL-1.0\\nLicensed under the Amazon Software License  http://aws.amazon.com/asl/\",\n\t\"import\": [\n\t\t{\n\t\t\t\"name\": \"alexa-layouts\",\n\t\t\t\"version\": \"1.4.0\"\n\t\t}\n\t],\n\t\"resources\": [\n\t\t{\n\t\t\t\"description\": \"Default dimensions, numbers and strings for the AlexaDetail\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"448dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"448dp\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"448dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"352dp\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"448dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"352dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"448dp\",\n\t\t\t\t\"detailImageBottomPadding\": \"@spacing3XSmall\",\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingSmall\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"100%\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacingSmall\",\n\t\t\t\t\"detailPaddingBelowLocationText\": \"@spacingSmall\",\n\t\t\t\t\"detailPaddingAboveSecondaryText\": \"@spacingSmall\",\n\t\t\t\t\"detailHeaderVerticalPaddingTop\": \"0\",\n\t\t\t\t\"detailHeaderVerticalPaddingBottom\": \"0\",\n\t\t\t\t\"detailHeaderSpacingAttributionImage\": \"0\",\n\t\t\t\t\"headerAttributionImageMaxWidth\": \"86dp\",\n\t\t\t\t\"headerAttributionImageHeight\": \"24dp\",\n\t\t\t\t\"headerTitleTextHeight\": \"${@fontSizeSmall * @lineHeightNormal}\",\n\t\t\t\t\"detailPaddingBetweenImageAndContentBlock\": \"@spacingMedium\",\n\t\t\t\t\"detailBottomPadding\": \"@spacing3XLarge\",\n\t\t\t\t\"detailImageBlockTopPadding\": 0,\n\t\t\t\t\"detailContentBlockIngredientTopPadding\": 0,\n\t\t\t\t\"detailContentBlockRatingPaddingTop\": 0,\n\t\t\t\t\"detailImageBlockBottomPadding\": 0\n\t\t\t},\n\t\t\t\"strings\": {\n\t\t\t\t\"detailPrimaryTextStyle\": \"textStyleDisplay4\",\n\t\t\t\t\"detailPrimaryTextAlignment\": \"start\",\n\t\t\t\t\"detailSecondaryTextStyle\": \"textStyleMetadata\",\n\t\t\t\t\"detailSecondaryTextAlignment\": \"start\",\n\t\t\t\t\"detailBodyTextAlignment\": \"start\",\n\t\t\t\t\"detailBodyTextStyle\": \"textStyleBody\",\n\t\t\t\t\"detailIngredientsTextStyle\": \"textStyleBody\",\n\t\t\t\t\"detailLocationTextStyle\": \"textStyleBody\",\n\t\t\t\t\"detailButtonArrayAlignment\": \"start\",\n\t\t\t\t\"detailTertiaryTextAlignment\": \"start\",\n\t\t\t\t\"detailQuaternaryTextAlignment\": \"start\",\n\t\t\t\t\"detailLocationTextAlignment\": \"start\",\n\t\t\t\t\"detailButtonArrayAlignmentDirection\": \"row\"\n\t\t\t},\n\t\t\t\"numbers\": {\n\t\t\t\t\"detailImageCaptionOpacity\": 1,\n\t\t\t\t\"detailSecondaryTextMaxLinesGeneric\": 4,\n\t\t\t\t\"detailSecondaryTextMaxLinesMoviesTV\": 1,\n\t\t\t\t\"detailSecondaryTextMaxLinesLocation\": 4,\n\t\t\t\t\"detailSecondaryTextMaxLinesRecipe\": 4\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - Hub Small\",\n\t\t\t\"when\": \"${@viewportProfile == @hubLandscapeSmall}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"256dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"256dp\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"256dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"184dp\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"256dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"184dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"256dp\",\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingXSmall\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"100%\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacingXSmall\",\n\t\t\t\t\"detailPaddingBelowLocationText\": \"@spacingXSmall\",\n\t\t\t\t\"detailPaddingAboveSecondaryText\": \"@spacingXSmall\",\n\t\t\t\t\"detailBottomPadding\": \"@spacing2XLarge\"\n\t\t\t},\n\t\t\t\"strings\": {\n\t\t\t\t\"detailBodyTextStyle\": \"textStyleCallout\",\n\t\t\t\t\"detailLocationTextStyle\": \"textStyleCallout\",\n\t\t\t\t\"detailIngredientsTextStyle\": \"textStyleCallout\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - Hub Medium\",\n\t\t\t\"when\": \"${@viewportProfile == @hubLandscapeMedium}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"308dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"308dp\",\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingXSmall\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"308dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"232dp\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"308dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"232dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"308dp\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"100%\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacingXSmall\",\n\t\t\t\t\"detailPaddingBelowLocationText\": \"@spacingXSmall\",\n\t\t\t\t\"detailPaddingAboveSecondaryText\": \"@spacingXSmall\",\n\t\t\t\t\"detailBottomPadding\": \"@spacing2XLarge\"\n\t\t\t},\n\t\t\t\"strings\": {\n\t\t\t\t\"detailBodyTextStyle\": \"textStyleCallout\",\n\t\t\t\t\"detailLocationTextStyle\": \"textStyleCallout\",\n\t\t\t\t\"detailIngredientsTextStyle\": \"textStyleCallout\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - Hub Landscape Extra Large\",\n\t\t\t\"when\": \"${@viewportProfile == @hubLandscapeXLarge}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"702dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"702dp\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"702dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"550dp\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"702dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"550dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"702dp\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"780dp\",\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingSmall\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacing3XSmall\",\n\t\t\t\t\"detailPaddingBelowLocationText\": \"@spacingSmall\",\n\t\t\t\t\"detailContentBlockIngredientTopPadding\": \"@spacingXLarge\",\n\t\t\t\t\"detailContentBlockRatingPaddingTop\": \"@spacing3XSmall\",\n\t\t\t\t\"detailPaddingBetweenImageAndContentBlock\": \"0\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - Hub Portrait Medium\",\n\t\t\t\"when\": \"${@viewportProfile == @hubPortraitMedium}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"702dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"702dp\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"702dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"550dp\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"702dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"550dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"702dp\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"843dp\",\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingSmall\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacing3XSmall\",\n\t\t\t\t\"detailPaddingBelowLocationText\": \"@spacingSmall\",\n\t\t\t\t\"detailImageBlockTopPadding\": \"@spacingMedium\",\n\t\t\t\t\"detailContentBlockIngredientTopPadding\": \"@spacingXLarge\",\n\t\t\t\t\"detailContentBlockRatingPaddingTop\": \"@spacing3XSmall\",\n\t\t\t\t\"detailPaddingBetweenImageAndContentBlock\": \"@spacingMedium\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - Mobile Small\",\n\t\t\t\"when\": \"${@viewportProfile == @mobileSmall}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"52vw\",\n\t\t\t\t\"detailImageRoundWidth\": \"52vw\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"52vw\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"40vw\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"52vw\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"40vw\",\n\t\t\t\t\"detailWideScreenWidth\": \"52vw\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"80vw\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacingXSmall\",\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingXSmall\",\n\t\t\t\t\"detailPaddingBelowLocationText\": \"@spacingXSmall\",\n\t\t\t\t\"detailContentBlockRatingPaddingTop\": \"@spacing3XSmall\",\n\t\t\t\t\"detailPaddingBetweenImageAndContentBlock\": \"@spacingMedium\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - Mobile Medium\",\n\t\t\t\"when\": \"${@viewportProfile == @mobileMedium}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"312dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"312dp\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"312dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"232dp\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"312dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"232dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"312dp\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"50vw\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacingXSmall\",\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingXSmall\",\n\t\t\t\t\"detailPaddingBelowLocationText\": \"@spacingXSmall\",\n\t\t\t\t\"detailContentBlockRatingPaddingTop\": \"@spacing3XSmall\",\n\t\t\t\t\"detailPaddingBetweenImageAndContentBlock\": \"@spacingLarge\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - Mobile Large\",\n\t\t\t\"when\": \"${@viewportProfile == @mobileLarge}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"416dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"416dp\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"416dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"326dp\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"416dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"326dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"416dp\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"50vw\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacingXSmall\",\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingXSmall\",\n\t\t\t\t\"detailPaddingBelowLocationText\": \"@spacingXSmall\",\n\t\t\t\t\"detailContentBlockRatingPaddingTop\": \"@spacing3XSmall\",\n\t\t\t\t\"detailPaddingBetweenImageAndContentBlock\": \"@spacingLarge\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - Hub Round\",\n\t\t\t\"when\": \"${@viewportProfileCategory == @hubRound}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"256dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"256dp\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"256dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"184dp\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"256dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"184dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"256dp\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"100%\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacing3XSmall\",\n\t\t\t\t\"detailPaddingAboveSecondaryText\": \"0\",\n\t\t\t\t\"detailBottomPadding\": \"@spacing2XLarge\"\n\t\t\t},\n\t\t\t\"strings\": {\n\t\t\t\t\"detailPrimaryTextAlignment\": \"center\",\n\t\t\t\t\"detailSecondaryTextAlignment\": \"center\",\n\t\t\t\t\"detailBodyTextAlignment\": \"center\",\n\t\t\t\t\"detailButtonArrayAlignment\": \"center\",\n\t\t\t\t\"detailTertiaryTextAlignment\": \"center\",\n\t\t\t\t\"detailQuaternaryTextAlignment\": \"center\",\n\t\t\t\t\"detailLocationTextAlignment\": \"center\",\n\t\t\t\t\"detailButtonArrayAlignmentDirection\": \"column\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - TV\",\n\t\t\t\"when\": \"${@viewportProfileGroup == @tv}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingMedium\",\n\t\t\t\t\"detailImageSquareWidth\": \"344dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"344dp\",\n\t\t\t\t\"detailImageBottomPadding\": \"@spacingXSmall\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"344dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"272dp\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"@spacingXSmall\",\n\t\t\t\t\"detailPaddingAboveSecondaryText\": \"@spacing3XSmall\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"344dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"272dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"344dp\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"416dp\"\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"description\": \"Public resource definitions for button spacings and dimensions - TV landscape overlay\",\n\t\t\t\"when\": \"${@viewportProfile == @tvLandscapeOverlay}\",\n\t\t\t\"dimensions\": {\n\t\t\t\t\"detailImageSquareWidth\": \"144dp\",\n\t\t\t\t\"detailImageRoundWidth\": \"144dp\",\n\t\t\t\t\"detailStandardLandscapeWidth\": \"192dp\",\n\t\t\t\t\"detailStandardPortraitWidth\": \"108dp\",\n\t\t\t\t\"detailPosterLandscapeWidth\": \"216dp\",\n\t\t\t\t\"detailPosterPortraitWidth\": \"108dp\",\n\t\t\t\t\"detailWideScreenWidth\": \"256dp\",\n\t\t\t\t\"detailButtonTopBottomPadding\": \"@spacingXSmall\",\n\t\t\t\t\"detailContentBlockMaxWidth\": \"560dp\",\n\t\t\t\t\"detailImageTextTvLandscapeOverlayMaxWidth\": \"542dp\",\n\t\t\t\t\"detailPaddingBelowPrimaryText\": \"0dp\",\n\t\t\t\t\"detailPaddingBetweenImageAndContentBlock\": \"@spacingXLarge\",\n\t\t\t\t\"detailPaddingAboveSecondaryText\": \"@spacing3XSmall\",\n\t\t\t\t\"TVimageCaptionTopPadding\": \"@spacing3XSmall\",\n\t\t\t\t\"detailHeaderVerticalPaddingTop\": \"@spacingLarge\",\n\t\t\t\t\"detailHeaderVerticalPaddingBottom\": \"@spacingXSmall\",\n\t\t\t\t\"detailHeaderSpacingAttributionImage\": \"100dp\",\n\t\t\t\t\"detailBottomPadding\": \"@spacingXLarge\",\n\t\t\t\t\"detailImageBlockTopPadding\": \"@spacingXLarge\"\n\t\t\t},\n\t\t\t\"strings\": {\n\t\t\t\t\"detailPrimaryTextStyle\": \"textStyleDisplay5\"\n\t\t\t},\n\t\t\t\"numbers\": {\n\t\t\t\t\"detailImageCaptionOpacity\": \"@opacitySecondary\",\n\t\t\t\t\"detailSecondaryTextMaxLinesGeneric\": 1,\n\t\t\t\t\"detailSecondaryTextMaxLinesMoviesTV\": 1,\n\t\t\t\t\"detailSecondaryTextMaxLinesRecipe\": 1\n\t\t\t}\n\t\t}\n\t],\n\t\"layouts\": {\n\t\t\"AlexaDetailImageLeftVersion\": {\n\t\t\t\"description\": \"AlexaDetail image left version for all 3 hub landscapes & tv fullscreen.\",\n\t\t\t\"parameters\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageHeight\",\n\t\t\t\t\t\"description\": \"Dimension value to set image height\",\n\t\t\t\t\t\"type\": \"dimension\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageAspectRatio\",\n\t\t\t\t\t\"description\": \"Aspect ratio of the image. Options are square, round, standard_landscape, standard_portrait, poster_landscape, poster_portrait, widescreen. Default to square\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"square\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageScale\",\n\t\t\t\t\t\"description\": \"Scale setting for the image. Options are none, fill, best-fit, best-fill, best-fit-down. Default to best-fit\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"best-fit\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageAlignment\",\n\t\t\t\t\t\"description\": \"Alignment setting for the image. Options are bottom, bottom-left, bottom-right, center, left, right, top, top-left, top-right. Default to center\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"center\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageRoundedCorner\",\n\t\t\t\t\t\"description\": \"Whether to use rounded corners for the image\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageBlurredBackground\",\n\t\t\t\t\t\"description\": \"Set a blurred version of the image to appear behind the image to create a visually consistent container size\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageSource\",\n\t\t\t\t\t\"description\": \"URI for the image\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"theme\",\n\t\t\t\t\t\"description\": \"Colors will be switched depending on the specified theme (light/dark). Default to dark theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"dark\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerTitle\",\n\t\t\t\t\t\"description\": \"Primary text to render in header.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerSubtitle\",\n\t\t\t\t\t\"description\": \"Secondary text to render in header.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionOpacity\",\n\t\t\t\t\t\"type\": \"number\",\n\t\t\t\t\t\"default\": \"${@viewportProfileCategory == @hubRound ? 1 : @opacitySecondary}\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionText\",\n\t\t\t\t\t\"description\": \"Attribution text to render in header.  Only shown when no headerAttributionImage is provided, and when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionImage\",\n\t\t\t\t\t\"description\": \"URL for attribution image source. Only shown when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionPrimacy\",\n\t\t\t\t\t\"description\": \"On devices that can only display one element due to screen size, Attribution is prioritized. Setting False displays Title/Subtitle.  Defaults to true.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButton\",\n\t\t\t\t\t\"description\": \"Toggle to display back button in header.  Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButtonAccessibilityLabel\",\n\t\t\t\t\t\"description\": \"An accessibility label to describe the back button to customers who use a screen reader.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButtonCommand\",\n\t\t\t\t\t\"description\": \"Command that is issued when back button is pressed.\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"default\": {\n\t\t\t\t\t\t\"type\": \"SendEvent\",\n\t\t\t\t\t\t\"arguments\": [\n\t\t\t\t\t\t\t\"goBack\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackgroundColor\",\n\t\t\t\t\t\"description\": \"Optional color value to use as background color for Header. Defaults to transparent.\",\n\t\t\t\t\t\"type\": \"color\",\n\t\t\t\t\t\"default\": \"transparent\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundColor\",\n\t\t\t\t\t\"description\": \"Color value to use as background color for layout.\",\n\t\t\t\t\t\"type\": \"color\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundImageSource\",\n\t\t\t\t\t\"description\": \"URL for background image source.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundVideoSource\",\n\t\t\t\t\t\"description\": \"URL for background video source.\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundScale\",\n\t\t\t\t\t\"description\": \"Image/video scale to apply to background image/video. Defaults to best-fill.\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"best-fill\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundAlign\",\n\t\t\t\t\t\"description\": \"Image/video alignment to apply to background image/video. Defaults to center.\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"center\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundBlur\",\n\t\t\t\t\t\"description\": \"Toggle to apply background blur. Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundOverlayNoise\",\n\t\t\t\t\t\"description\": \"Toggle to apply noise to background image. Defaults to false\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundColorOverlay\",\n\t\t\t\t\t\"description\": \"Toggle to apply overlay scrim to background image/video. Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundOverlayGradient\",\n\t\t\t\t\t\"description\": \"Toggle to apply gradient to background image/video. Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundVideoAutoPlay\",\n\t\t\t\t\t\"description\": \"Toggle to autoplay background video(s). Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundVideoAudioTrack\",\n\t\t\t\t\t\"description\": \"Audio track to play on. Defaults to foreground. EM can select foreground | background | none.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"theme\",\n\t\t\t\t\t\"description\": \"Colors will be switched depending on the specified theme (light/dark). Default to dark theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"dark\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerTitle\",\n\t\t\t\t\t\"description\": \"Primary text to render in header.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerSubtitle\",\n\t\t\t\t\t\"description\": \"Secondary text to render in header.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionText\",\n\t\t\t\t\t\"description\": \"Attribution text to render in header.  Only shown when no headerAttributionImage is provided, and when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionImage\",\n\t\t\t\t\t\"description\": \"URL for attribution image source. Only shown when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionPrimacy\",\n\t\t\t\t\t\"description\": \"On devices that can only display one element due to screen size, Attribution is prioritized. Setting False displays Title/Subtitle.  Defaults to true.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButton\",\n\t\t\t\t\t\"description\": \"Toggle to display back button in header.  Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButtonAccessibilityLabel\",\n\t\t\t\t\t\"description\": \"An accessibility label to describe the back button to customers who use a screen reader.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButtonCommand\",\n\t\t\t\t\t\"description\": \"Command that is issued when back button is pressed.\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"default\": {\n\t\t\t\t\t\t\"type\": \"SendEvent\",\n\t\t\t\t\t\t\"arguments\": [\n\t\t\t\t\t\t\t\"goBack\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackgroundColor\",\n\t\t\t\t\t\"description\": \"Optional color value to use as background color for Header. Defaults to transparent.\",\n\t\t\t\t\t\"type\": \"color\",\n\t\t\t\t\t\"default\": \"transparent\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingSlotPadding\",\n\t\t\t\t\t\"type\": \"dimension\",\n\t\t\t\t\t\"description\": \"The adjustable padding between rating item.\",\n\t\t\t\t\t\"default\": \"3dp\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingSlotMode\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The mode for single-asset or multiple-asset.\",\n\t\t\t\t\t\"default\": \"multiple\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingGraphicType\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The type for the rating graphic, options are AVG or image. If user selected image, they need to supply resource in the graphic parameters. Default to AVG if no valued provided.\",\n\t\t\t\t\t\"default\": \"AVG\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"singleRatingGraphicWidth\",\n\t\t\t\t\t\"type\": \"dimension\",\n\t\t\t\t\t\"description\": \"The width for single rating graphic.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingNumber\",\n\t\t\t\t\t\"type\": \"number\",\n\t\t\t\t\t\"description\": \"The rating for rendering stars\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"singleRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for rating graphic.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"fullRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for full rating AVG. Default to full AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"halfRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for half rating AVG. Default to half AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"emptyRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for empty rating AVG. Default to empty AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown besides the rating.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"primaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The primary text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"secondaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The secondary text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"tertiaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The tertiary text shown in the content block, this will only show up when detailType is moviesTV.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"quaternaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The quaternary text shown in the content block, this will only show up when detailType is moviesTV.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"locationText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The location text shown in the content block, this will only show up when detailType is location.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"bodyText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The body text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Colors of button 1 will be swiched depend on the specified theme (light/dark). Default to dark theme\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Colors of button 2 will be swiched depend on the specified theme (light/dark). Default to dark theme\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Text\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown on button 1 the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Text\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown on button 1 the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Style\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The button style of button 1 the content block, can be outlined or contained. Defaults to contained.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Style\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The button style of button 2 the content block, can be outlined or contained. Defaults to contained.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1PrimaryAction\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The action of button 1 that is triggered when the Button is selected.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2PrimaryAction\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The action of button 2 that is triggered when the Button is selected.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1AccessibilityLabel\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Voice over will read this string when the user selects button 1.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2AccessibilityLabel\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Voice over will read this string when the user selects button 2.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientsText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The ingredients title text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientListItems\",\n\t\t\t\t\t\"description\": \"Array of list item datasources to present in the ingredient list.  See documentation on list item datasources for required data signature.\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientsHideDivider\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"description\": \"Toggle to hide the divider that appears at the bottom of each item to help separate it from the content below. Default to false.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageCaption\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The image caption is a title or brief explanation of the image.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"entities\",\n\t\t\t\t\t\"description\": \"Array of entity data bind to this layout\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageShadow\",\n\t\t\t\t\t\"description\": \"Boolean to turn the drop shadow on or off on the image\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"layoutDirection\",\n\t\t\t\t\t\"description\": \"The layoutDirection property of AlexaDetail. It can be LTR or RTL. By default, it uses environment layoutDirection.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"lang\",\n\t\t\t\t\t\"description\": \"The lang property of AlexaDetail. Set the lang property to a BCP-47 string (e.g., en-US). By default, it uses environment lang.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"items\": [\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\"entities\": \"${entities}\",\n\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"AlexaBackground\",\n\t\t\t\t\t\t\t\"backgroundColor\": \"${backgroundColor}\",\n\t\t\t\t\t\t\t\"backgroundImageSource\": \"${backgroundImageSource}\",\n\t\t\t\t\t\t\t\"backgroundVideoSource\": \"${backgroundVideoSource}\",\n\t\t\t\t\t\t\t\"backgroundScale\": \"${backgroundScale}\",\n\t\t\t\t\t\t\t\"backgroundAlign\": \"${backgroundAlign}\",\n\t\t\t\t\t\t\t\"backgroundBlur\": \"${backgroundBlur}\",\n\t\t\t\t\t\t\t\"overlayNoise\": \"${backgroundOverlayNoise}\",\n\t\t\t\t\t\t\t\"colorOverlay\": \"${backgroundColorOverlay}\",\n\t\t\t\t\t\t\t\"overlayGradient\": \"${backgroundOverlayGradient}\",\n\t\t\t\t\t\t\t\"videoAutoPlay\": \"${backgroundVideoAutoPlay}\",\n\t\t\t\t\t\t\t\"videoAudioTrack\": \"${backgroundVideoAudioTrack}\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"AlexaHeader\",\n\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\"headerTitle\": \"${headerTitle}\",\n\t\t\t\t\t\t\t\"headerSubtitle\": \"${headerSubtitle}\",\n\t\t\t\t\t\t\t\"headerAttributionText\": \"${headerAttributionText}\",\n\t\t\t\t\t\t\t\"headerAttributionImage\": \"${headerAttributionImage}\",\n\t\t\t\t\t\t\t\"headerAttributionPrimacy\": \"${headerAttributionPrimacy}\",\n\t\t\t\t\t\t\t\"headerDivider\": \"${headerDivider}\",\n\t\t\t\t\t\t\t\"headerBackButton\": \"${headerBackButton}\",\n\t\t\t\t\t\t\t\"headerBackButtonAccessibilityLabel\": \"${headerBackButtonAccessibilityLabel}\",\n\t\t\t\t\t\t\t\"headerBackButtonCommand\": \"${headerBackButtonCommand}\",\n\t\t\t\t\t\t\t\"headerBackgroundColor\": \"${headerBackgroundColor}\",\n\t\t\t\t\t\t\t\"headerAttributionOpacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"ScrollView\",\n\t\t\t\t\t\t\t\"id\": \"${scrollViewId}\",\n\t\t\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\t\t\"shrink\": 1,\n\t\t\t\t\t\t\t\"onScroll\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"SetValue\",\n\t\t\t\t\t\t\t\t\t\"componentId\": \"headerdivider\",\n\t\t\t\t\t\t\t\t\t\"property\": \"opacity\",\n\t\t\t\t\t\t\t\t\t\"value\": \"${event.source.position == 0 ? 0 : 1}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"paddingStart\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\t\t\"paddingEnd\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\t\t\"paddingLeft\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\t\t\"paddingRight\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\t\t\"direction\": \"${((@viewportProfileGroup == @mobile && @viewportOrientation == @viewportOrientationPortrait) || @viewportProfile == @hubPortraitMedium)? 'column' : 'row'}\",\n\t\t\t\t\t\t\t\t\t\"justifyContent\": \"spaceBetween\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\t\t\"paddingEnd\": \"@detailPaddingBetweenImageAndContentBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\"paddingStart\": \"0\",\n\t\t\t\t\t\t\t\t\t\t\t\"paddingRight\": \"@detailPaddingBetweenImageAndContentBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\"paddingBottom\": \"@detailPaddingBetweenImageAndContentBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaDetailImageBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageHeight\": \"${imageHeight}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageAspectRatio\": \"${imageAspectRatio}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageScale\": \"${imageScale}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageAlignment\": \"${imageAlignment}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageRoundedCorner\": \"${imageRoundedCorner}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageBlurredBackground\": \"${imageBlurredBackground}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageSource\": \"${imageSource}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageCaption\": \"${imageCaption}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageShadow\": \"${imageShadow}\"\n\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaDetailContentBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotPadding\": \"${ratingSlotPadding}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotMode\": \"${ratingSlotMode}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingGraphicType\": \"${ratingGraphicType}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphicWidth\": \"${singleRatingGraphicWidth}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingNumber\": \"${ratingNumber}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphic\": \"${singleRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"fullRatingGraphic\": \"${fullRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"halfRatingGraphic\": \"${halfRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"emptyRatingGraphic\": \"${emptyRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingText\": \"${ratingText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryText\": \"${primaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"secondaryText\": \"${secondaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"tertiaryText\": \"${tertiaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"quaternaryText\": \"${quaternaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"locationText\": \"${locationText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Theme\": \"${button1Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Theme\": \"${button2Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Text\": \"${button1Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Text\": \"${button2Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Style\": \"${button1Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Style\": \"${button2Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1PrimaryAction\": \"${button1PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2PrimaryAction\": \"${button2PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1AccessibilityLabel\": \"${button1AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2AccessibilityLabel\": \"${button2AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"bodyText\": \"${bodyText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsText\": \"${ingredientsText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientListItems\": \"${ingredientListItems}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsHideDivider\": \"${ingredientsHideDivider}\",\n\t\t\t\t\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\t\t\t\t\t\t\"lang\": \"${lang}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"AlexaDetailImageRightVersion\": {\n\t\t\t\"description\": \"AlexaDetail image right version for all 3 hub landscapes & tv fullscreen.\",\n\t\t\t\"parameters\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundColor\",\n\t\t\t\t\t\"description\": \"Color value to use as background color for layout.\",\n\t\t\t\t\t\"type\": \"color\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundImageSource\",\n\t\t\t\t\t\"description\": \"URL for background image source.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundVideoSource\",\n\t\t\t\t\t\"description\": \"URL for background video source.\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundScale\",\n\t\t\t\t\t\"description\": \"Image/video scale to apply to background image/video. Defaults to best-fill.\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"best-fill\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundAlign\",\n\t\t\t\t\t\"description\": \"Image/video alignment to apply to background image/video. Defaults to center.\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"center\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundBlur\",\n\t\t\t\t\t\"description\": \"Toggle to apply background blur. Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundOverlayNoise\",\n\t\t\t\t\t\"description\": \"Toggle to apply noise to background image. Defaults to false\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundColorOverlay\",\n\t\t\t\t\t\"description\": \"Toggle to apply overlay scrim to background image/video. Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundOverlayGradient\",\n\t\t\t\t\t\"description\": \"Toggle to apply gradient to background image/video. Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundVideoAutoPlay\",\n\t\t\t\t\t\"description\": \"Toggle to autoplay background video(s). Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundVideoAudioTrack\",\n\t\t\t\t\t\"description\": \"Audio track to play on. Defaults to foreground. EM can select foreground | background | none.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"theme\",\n\t\t\t\t\t\"description\": \"Colors will be switched depending on the specified theme (light/dark). Default to dark theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"dark\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionOpacity\",\n\t\t\t\t\t\"type\": \"number\",\n\t\t\t\t\t\"default\": \"${@viewportProfileCategory == @hubRound ? 1 : @opacitySecondary}\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerTitle\",\n\t\t\t\t\t\"description\": \"Primary text to render in header.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerSubtitle\",\n\t\t\t\t\t\"description\": \"Secondary text to render in header.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionText\",\n\t\t\t\t\t\"description\": \"Attribution text to render in header.  Only shown when no headerAttributionImage is provided, and when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionImage\",\n\t\t\t\t\t\"description\": \"URL for attribution image source. Only shown when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionPrimacy\",\n\t\t\t\t\t\"description\": \"On devices that can only display one element due to screen size, Attribution is prioritized. Setting False displays Title/Subtitle.  Defaults to true.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerDivider\",\n\t\t\t\t\t\"description\": \"Toggle to display the divider that appears at the bottom of header to help separate it from the content below. Default to false\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButton\",\n\t\t\t\t\t\"description\": \"Toggle to display back button in header.  Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButtonAccessibilityLabel\",\n\t\t\t\t\t\"description\": \"An accessibility label to describe the back button to customers who use a screen reader.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButtonCommand\",\n\t\t\t\t\t\"description\": \"Command that is issued when back button is pressed.\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"default\": {\n\t\t\t\t\t\t\"type\": \"SendEvent\",\n\t\t\t\t\t\t\"arguments\": [\n\t\t\t\t\t\t\t\"goBack\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackgroundColor\",\n\t\t\t\t\t\"description\": \"Optional color value to use as background color for Header. Defaults to transparent.\",\n\t\t\t\t\t\"type\": \"color\",\n\t\t\t\t\t\"default\": \"transparent\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingSlotPadding\",\n\t\t\t\t\t\"type\": \"dimension\",\n\t\t\t\t\t\"description\": \"The adjustable padding between rating item.\",\n\t\t\t\t\t\"default\": \"3dp\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingSlotMode\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The mode for single-asset or multiple-asset.\",\n\t\t\t\t\t\"default\": \"multiple\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingGraphicType\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The type for the rating graphic, options are AVG or image. If user selected image, they need to supply resource in the graphic parameters. Default to AVG if no valued provided.\",\n\t\t\t\t\t\"default\": \"AVG\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"singleRatingGraphicWidth\",\n\t\t\t\t\t\"type\": \"dimension\",\n\t\t\t\t\t\"description\": \"The width for single rating graphic.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingNumber\",\n\t\t\t\t\t\"type\": \"number\",\n\t\t\t\t\t\"description\": \"The rating for rendering stars\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"singleRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for rating graphic.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"fullRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for full rating AVG. Default to full AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"halfRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for half rating AVG. Default to half AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"emptyRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for empty rating AVG. Default to empty AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown besides the rating.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageHeight\",\n\t\t\t\t\t\"description\": \"Dimension value to set image height\",\n\t\t\t\t\t\"type\": \"dimension\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageAspectRatio\",\n\t\t\t\t\t\"description\": \"Aspect ratio of the image. Options are square, round, standard_landscape, standard_portrait, poster_landscape, poster_portrait, widescreen. Default to square\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"square\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageScale\",\n\t\t\t\t\t\"description\": \"Scale setting for the image. Options are none, fill, best-fit, best-fill, best-fit-down. Default to best-fit\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"best-fit\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageAlignment\",\n\t\t\t\t\t\"description\": \"Alignment setting for the image. Options are bottom, bottom-left, bottom-right, center, left, right, top, top-left, top-right. Default to center\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"center\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageRoundedCorner\",\n\t\t\t\t\t\"description\": \"Whether to use rounded corners for the image\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageBlurredBackground\",\n\t\t\t\t\t\"description\": \"Set a blurred version of the image to appear behind the image to create a visually consistent container size\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageSource\",\n\t\t\t\t\t\"description\": \"URI for the image\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"primaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The primary text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"secondaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The secondary text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"tertiaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The tertiary text shown in the content block, this will only show up when detailType is moviesTV.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"quaternaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The quaternary text shown in the content block, this will only show up when detailType is moviesTV.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"locationText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The location text shown in the content block, this will only show up when detailType is location.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"bodyText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The body text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Colors of button 1 will be swiched depend on the specified theme (light/dark). Default to dark theme\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Colors of button 2 will be swiched depend on the specified theme (light/dark). Default to dark theme\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Text\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown on button 1 the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Text\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown on button 1 the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Style\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The button style of button 1 the content block, can be outlined or contained. Defaults to contained.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Style\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The button style of button 2 the content block, can be outlined or contained. Defaults to contained.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1PrimaryAction\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The action of button 1 that is triggered when the Button is selected.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2PrimaryAction\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The action of button 2 that is triggered when the Button is selected.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1AccessibilityLabel\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Voice over will read this string when the user selects button 1.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2AccessibilityLabel\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Voice over will read this string when the user selects button 2.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientsText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The ingredients title text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientListItems\",\n\t\t\t\t\t\"description\": \"Array of list item datasources to present in the ingredient list.  See documentation on list item datasources for required data signature.\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientsHideDivider\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"description\": \"Toggle to hide the divider that appears at the bottom of each item to help separate it from the content below. Default to false.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageCaption\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The image caption is a title or brief explanation of the image.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"entities\",\n\t\t\t\t\t\"description\": \"Array of entity data bind to this layout\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageShadow\",\n\t\t\t\t\t\"description\": \"Boolean to turn the drop shadow on or off on the image\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"layoutDirection\",\n\t\t\t\t\t\"description\": \"The layoutDirection property of AlexaDetail. It can be LTR or RTL. By default, it uses environment layoutDirection.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"lang\",\n\t\t\t\t\t\"description\": \"The lang property of AlexaDetail. Set the lang property to a BCP-47 string (e.g., en-US). By default, it uses environment lang.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"items\": [\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\"entities\": \"${entities}\",\n\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"AlexaBackground\",\n\t\t\t\t\t\t\t\"backgroundColor\": \"${backgroundColor}\",\n\t\t\t\t\t\t\t\"backgroundImageSource\": \"${backgroundImageSource}\",\n\t\t\t\t\t\t\t\"backgroundVideoSource\": \"${backgroundVideoSource}\",\n\t\t\t\t\t\t\t\"backgroundScale\": \"${backgroundScale}\",\n\t\t\t\t\t\t\t\"backgroundAlign\": \"${backgroundAlign}\",\n\t\t\t\t\t\t\t\"backgroundBlur\": \"${backgroundBlur}\",\n\t\t\t\t\t\t\t\"overlayNoise\": \"${backgroundOverlayNoise}\",\n\t\t\t\t\t\t\t\"colorOverlay\": \"${backgroundColorOverlay}\",\n\t\t\t\t\t\t\t\"overlayGradient\": \"${backgroundOverlayGradient}\",\n\t\t\t\t\t\t\t\"videoAutoPlay\": \"${backgroundVideoAutoPlay}\",\n\t\t\t\t\t\t\t\"videoAudioTrack\": \"${backgroundVideoAudioTrack}\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"AlexaHeader\",\n\t\t\t\t\t\t\t\"headerTitle\": \"${headerTitle}\",\n\t\t\t\t\t\t\t\"headerSubtitle\": \"${headerSubtitle}\",\n\t\t\t\t\t\t\t\"headerAttributionText\": \"${headerAttributionText}\",\n\t\t\t\t\t\t\t\"headerAttributionImage\": \"${headerAttributionImage}\",\n\t\t\t\t\t\t\t\"headerAttributionPrimacy\": \"${headerAttributionPrimacy}\",\n\t\t\t\t\t\t\t\"headerDivider\": \"${headerDivider}\",\n\t\t\t\t\t\t\t\"headerBackButton\": \"${headerBackButton}\",\n\t\t\t\t\t\t\t\"headerBackButtonAccessibilityLabel\": \"${headerBackButtonAccessibilityLabel}\",\n\t\t\t\t\t\t\t\"headerBackButtonCommand\": \"${headerBackButtonCommand}\",\n\t\t\t\t\t\t\t\"headerBackgroundColor\": \"${headerBackgroundColor}\",\n\t\t\t\t\t\t\t\"headerAttributionOpacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\t\t\"theme\": \"${theme}\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"ScrollView\",\n\t\t\t\t\t\t\t\"id\": \"${scrollViewId}\",\n\t\t\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\t\t\"shrink\": 1,\n\t\t\t\t\t\t\t\"onScroll\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"SetValue\",\n\t\t\t\t\t\t\t\t\t\"componentId\": \"headerdivider\",\n\t\t\t\t\t\t\t\t\t\"property\": \"opacity\",\n\t\t\t\t\t\t\t\t\t\"value\": \"${event.source.position == 0 ? 0 : 1}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"bind\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"isPortraitOrientation\",\n\t\t\t\t\t\t\t\t\t\"value\": \"${(@viewportProfileGroup == @mobile && @viewportOrientation == @viewportOrientationPortrait) || @viewportProfile == @hubPortraitMedium}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"paddingStart\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\t\t\"paddingEnd\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\t\t\"paddingLeft\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\t\t\"paddingRight\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\t\t\"direction\": \"${isPortraitOrientation ? 'columnReverse' : 'row'}\",\n\t\t\t\t\t\t\t\t\t\"justifyContent\": \"spaceBetween\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaDetailContentBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerTitle\": \"${headerTitle}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerSubtitle\": \"${headerSubtitle}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionText\": \"${headerAttributionText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionOpacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionImage\": \"${headerAttributionImage}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionPrimacy\": \"${headerAttributionPrimacy}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerDivider\": \"${headerDivider}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackButton\": \"${headerBackButton}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackButtonAccessibilityLabel\": \"${headerBackButtonAccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackButtonCommand\": \"${headerBackButtonCommand}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackgroundColor\": \"${headerBackgroundColor}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotPadding\": \"${ratingSlotPadding}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotMode\": \"${ratingSlotMode}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingGraphicType\": \"${ratingGraphicType}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphicWidth\": \"${singleRatingGraphicWidth}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingNumber\": \"${ratingNumber}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphic\": \"${singleRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"fullRatingGraphic\": \"${fullRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"halfRatingGraphic\": \"${halfRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"emptyRatingGraphic\": \"${emptyRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingText\": \"${ratingText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryText\": \"${primaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"secondaryText\": \"${secondaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"tertiaryText\": \"${tertiaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"quaternaryText\": \"${quaternaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"locationText\": \"${locationText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Theme\": \"${button1Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Theme\": \"${button2Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Text\": \"${button1Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Text\": \"${button2Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Style\": \"${button1Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Style\": \"${button2Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1PrimaryAction\": \"${button1PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2PrimaryAction\": \"${button2PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1AccessibilityLabel\": \"${button1AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2AccessibilityLabel\": \"${button2AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"bodyText\": \"${bodyText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsText\": \"${ingredientsText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientListItems\": \"${ingredientListItems}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsHideDivider\": \"${ingredientsHideDivider}\",\n\t\t\t\t\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\t\t\t\t\t\t\"lang\": \"${lang}\"\n\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\t\t\"paddingStart\": \"${isPortraitOrientation ? 0 : @detailPaddingBetweenImageAndContentBlock}\",\n\t\t\t\t\t\t\t\t\t\t\t\"paddingEnd\": \"0\",\n\t\t\t\t\t\t\t\t\t\t\t\"paddingLeft\": \"${isPortraitOrientation ? 0 : @detailPaddingBetweenImageAndContentBlock}\",\n\t\t\t\t\t\t\t\t\t\t\t\"paddingBottom\": \"@detailPaddingBetweenImageAndContentBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaDetailImageBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageAlignment\": \"${imageAlignment}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageRoundedCorner\": \"${imageRoundedCorner}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageBlurredBackground\": \"${imageBlurredBackground}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageSource\": \"${imageSource}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageCaption\": \"${imageCaption}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageShadow\": \"${imageShadow}\",\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageHeight\": 300,\n\t\t\t\t\t\t\t\t\t\t\t\t\t\"imageAspectRatio\": \"${imageAspectRatio}\"\n\t\t\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"AlexaDetailContentBlock\": {\n\t\t\t\"description\": \"the content block\",\n\t\t\t\"parameters\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Theme for everything in content block.\",\n\t\t\t\t\t\"default\": \"dark\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionOpacity\",\n\t\t\t\t\t\"type\": \"number\",\n\t\t\t\t\t\"default\": \"${@viewportProfileCategory == @hubRound ? 1 : @opacitySecondary}\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerTitle\",\n\t\t\t\t\t\"description\": \"Primary text to render in header.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionText\",\n\t\t\t\t\t\"description\": \"Attribution text to render in header. Only shown when no headerAttributionImage is provided, and when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionImage\",\n\t\t\t\t\t\"description\": \"URL for attribution image source. Only shown when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingSlotPadding\",\n\t\t\t\t\t\"type\": \"dimension\",\n\t\t\t\t\t\"description\": \"The adjustable padding between rating item.\",\n\t\t\t\t\t\"default\": \"3dp\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingSlotMode\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The mode for single-asset or multiple-asset.\",\n\t\t\t\t\t\"default\": \"multiple\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingGraphicType\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The type for the rating graphic, options are AVG or image. If user selected image, they need to supply resource in the graphic parameters. Default to AVG if no valued provided.\",\n\t\t\t\t\t\"default\": \"AVG\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"singleRatingGraphicWidth\",\n\t\t\t\t\t\"type\": \"dimension\",\n\t\t\t\t\t\"description\": \"The width for single rating graphic.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingNumber\",\n\t\t\t\t\t\"type\": \"number\",\n\t\t\t\t\t\"description\": \"The rating for rendering stars\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"singleRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for rating graphic.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"fullRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for full rating AVG. Default to full AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"halfRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for half rating AVG. Default to half AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"emptyRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for empty rating AVG. Default to empty AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown besides the rating.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"primaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The primary text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"secondaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The secondary text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"tertiaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The tertiary text shown in the content block, this will only show up when detailType is moviesTV.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"quaternaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The quaternary text shown in the content block, this will only show up when detailType is moviesTV.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"locationText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The location text shown in the content block, this will only show up when detailType is location.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"bodyText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The body text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Colors of button 1 will be swiched depend on the specified theme (light/dark). Default to dark theme\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Colors of button 2 will be swiched depend on the specified theme (light/dark). Default to dark theme\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Text\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown on button 1 the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Text\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown on button 1 the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Style\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The button style of button 1 the content block, can be outlined or contained. Defaults to contained.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Style\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The button style of button 2 the content block, can be outlined or contained. Defaults to contained.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1PrimaryAction\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The action of button 1 that is triggered when the Button is selected.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2PrimaryAction\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The action of button 2 that is triggered when the Button is selected.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1AccessibilityLabel\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Voice over will read this string when the user selects button 1.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2AccessibilityLabel\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Voice over will read this string when the user selects button 2.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientsText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The ingredients title text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientListItems\",\n\t\t\t\t\t\"description\": \"Array of list item datasources to present in the ingredient list.  See documentation on list item datasources for required data signature.\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientsHideDivider\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"description\": \"Toggle to hide the divider that appears at the bottom of each item to help separate it from the content below. Default to false.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"layoutDirection\",\n\t\t\t\t\t\"description\": \"The layoutDirection property of AlexaDetail. It can be LTR or RTL. By default, it uses environment layoutDirection.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"lang\",\n\t\t\t\t\t\"description\": \"The lang property of AlexaDetail. Set the lang property to a BCP-47 string (e.g., en-US). By default, it uses environment lang.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"items\": [\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\"direction\": \"row\",\n\t\t\t\t\t\"shrink\": 1,\n\t\t\t\t\t\"bind\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"name\": \"aplVersion\",\n\t\t\t\t\t\t\t\"value\": \"${environment.aplVersion}\",\n\t\t\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"name\": \"textAlignStart\",\n\t\t\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\t\t\"value\": \"${aplVersion >= 1.7 ? 'start' : (layoutDirection == 'RTL' ? 'right' : 'left')}\"\n\t\t\t\t\t\t}\n\t\t\t\t\t],\n\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\"maxWidth\": \"@detailContentBlockMaxWidth\",\n\t\t\t\t\t\t\t\"paddingBottom\": \"@detailBottomPadding\",\n\t\t\t\t\t\t\t\"bind\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"name\": \"detailContentPaddingEnd\",\n\t\t\t\t\t\t\t\t\t\"value\": \"${@viewportProfile == @tvLandscapeOverlay ? @spacing3XLarge : '0dp'}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"paddingEnd\": \"${detailContentPaddingEnd}\",\n\t\t\t\t\t\t\t\"paddingStart\": \"0\",\n\t\t\t\t\t\t\t\"paddingRight\": \"${detailContentPaddingEnd}\",\n\t\t\t\t\t\t\t\"shrink\": 1,\n\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${@viewportProfile == @tvLandscapeOverlay}\",\n\t\t\t\t\t\t\t\t\t\"paddingTop\": \"@spacingLarge\",\n\t\t\t\t\t\t\t\t\t\"paddingBottom\": \"@spacingXSmall\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"direction\": \"column\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"when\": \"${headerTitle && headerTitle != ''}\",\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\t\t\"text\": \"${String.toUpperCase(String.slice(headerTitle, 0, 1))}${String.slice(headerTitle, 1)}\",\n\t\t\t\t\t\t\t\t\t\t\t\"maxLines\": 1,\n\t\t\t\t\t\t\t\t\t\t\t\"style\": \"textStyleTitle\",\n\t\t\t\t\t\t\t\t\t\t\t\"color\": \"${theme != 'light' ? '@colorTextSecondary' : '@colorTextReversed'}\",\n\t\t\t\t\t\t\t\t\t\t\t\"textAlign\": \"@detailPrimaryTextAlignment\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${primaryText && primaryText != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\"style\": \"@detailPrimaryTextStyle\",\n\t\t\t\t\t\t\t\t\t\"fontWeight\": \"@fontWeightMedium\",\n\t\t\t\t\t\t\t\t\t\"paddingBottom\": \"@detailPaddingBelowPrimaryText\",\n\t\t\t\t\t\t\t\t\t\"textAlign\": \"@detailPrimaryTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\"text\": \"${primaryText}\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"paddingTop\": \"@detailContentBlockRatingPaddingTop\",\n\t\t\t\t\t\t\t\t\t\"alignSelf\": \"@detailQuaternaryTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"when\": \"${(detailType == 'location' || detailType == 'recipe') && ((Math.isNaN(ratingNumber) == false || ratingNumber >= 0) || (ratingText && ratingText != '') || (singleRatingGraphic && singleRatingGraphic != ''))}\",\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaRating\",\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotPadding\": \"${ratingSlotPadding}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotMode\": \"${ratingSlotMode}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingGraphicType\": \"${ratingGraphicType}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphicWidth\": \"${singleRatingGraphicWidth}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingNumber\": \"${ratingNumber}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphic\": \"${singleRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"fullRatingGraphic\": \"${fullRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"halfRatingGraphic\": \"${halfRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"emptyRatingGraphic\": \"${emptyRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingText\": \"${ratingText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"textAlign\": \"@detailLocationTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\"text\": \"${locationText}\",\n\t\t\t\t\t\t\t\t\t\"maxLines\": 5,\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType == 'location' && locationText && locationText != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\"style\": \"@detailLocationTextStyle\",\n\t\t\t\t\t\t\t\t\t\"paddingTop\": \"@detailPaddingBelowLocationText\",\n\t\t\t\t\t\t\t\t\t\"paddingBottom\": \"@detailPaddingBelowLocationText\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType == 'generic' && secondaryText && secondaryText != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\"opacity\": \"@opacitySecondary\",\n\t\t\t\t\t\t\t\t\t\"style\": \"@detailSecondaryTextStyle\",\n\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\"textAlign\": \"@detailSecondaryTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"maxLines\": \"@detailSecondaryTextMaxLinesGeneric\",\n\t\t\t\t\t\t\t\t\t\"text\": \"${secondaryText}\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType == 'moviesTV' && secondaryText && secondaryText != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\"opacity\": \"@opacitySecondary\",\n\t\t\t\t\t\t\t\t\t\"style\": \"@detailSecondaryTextStyle\",\n\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\"textAlign\": \"@detailSecondaryTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"maxLines\": \"@detailSecondaryTextMaxLinesMoviesTV\",\n\t\t\t\t\t\t\t\t\t\"text\": \"${secondaryText}\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType == 'location' && secondaryText && secondaryText != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\"opacity\": \"@opacitySecondary\",\n\t\t\t\t\t\t\t\t\t\"style\": \"@detailSecondaryTextStyle\",\n\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\"textAlign\": \"@detailSecondaryTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"maxLines\": \"@detailSecondaryTextMaxLinesLocation\",\n\t\t\t\t\t\t\t\t\t\"text\": \"${secondaryText}\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType == 'recipe' && secondaryText && secondaryText != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\"opacity\": \"@opacitySecondary\",\n\t\t\t\t\t\t\t\t\t\"style\": \"@detailSecondaryTextStyle\",\n\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\"textAlign\": \"@detailSecondaryTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"paddingTop\": \"@detailPaddingAboveSecondaryText\",\n\t\t\t\t\t\t\t\t\t\"maxLines\": \"@detailSecondaryTextMaxLinesRecipe\",\n\t\t\t\t\t\t\t\t\t\"text\": \"${secondaryText}\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType == 'moviesTV'}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"direction\": \"row\",\n\t\t\t\t\t\t\t\t\t\"maxHeight\": \"${@fontSizeXSmall * @lineHeightNormal}\",\n\t\t\t\t\t\t\t\t\t\"justifyContent\": \"@detailTertiaryTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"when\": \"${(Math.isNaN(ratingNumber) == false || ratingNumber >= 0) || (ratingText && ratingText != '') || (singleRatingGraphic && singleRatingGraphic != '')}\",\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaRating\",\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotPadding\": \"${ratingSlotPadding}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotMode\": \"${ratingSlotMode}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingGraphicType\": \"${ratingGraphicType}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphicWidth\": \"${singleRatingGraphicWidth}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingNumber\": \"${ratingNumber}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphic\": \"${singleRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"fullRatingGraphic\": \"${fullRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"halfRatingGraphic\": \"${halfRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"emptyRatingGraphic\": \"${emptyRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingText\": \"${ratingText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\"\n\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"when\": \"${tertiaryText && tertiaryText != ''}\",\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\t\t\"style\": \"textStyleMetadata\",\n\t\t\t\t\t\t\t\t\t\t\t\"opacity\": \"@opacitySecondary\",\n\t\t\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\t\t\"maxLines\": 1,\n\t\t\t\t\t\t\t\t\t\t\t\"shrink\": 1,\n\t\t\t\t\t\t\t\t\t\t\t\"text\": \"${tertiaryText}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType == 'moviesTV' && quaternaryText && quaternaryText != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\"style\": \"textStyleMetadata\",\n\t\t\t\t\t\t\t\t\t\"opacity\": \"@opacitySecondary\",\n\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\"textAlign\": \"@detailQuaternaryTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"maxLines\": 1,\n\t\t\t\t\t\t\t\t\t\"text\": \"${quaternaryText}\"\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${@viewportProfile == @tvLandscapeOverlay && imageCaption && imageCaption != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"direction\": \"row\",\n\t\t\t\t\t\t\t\t\t\"paddingTop\": \"@TVimageCaptionTopPadding\",\n\t\t\t\t\t\t\t\t\t\"maxWidth\": \"@detailImageTextTvLandscapeOverlayMaxWidth\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\t\t\"style\": \"textStyleCaption\",\n\t\t\t\t\t\t\t\t\t\t\t\"opacity\": \"@opacitySecondary\",\n\t\t\t\t\t\t\t\t\t\t\t\"textAlign\": \"${textAlignStart}\",\n\t\t\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\t\t\"maxLines\": 1,\n\t\t\t\t\t\t\t\t\t\t\t\"text\": \"${imageCaption}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${(button1Text && button1Text != '') || (button2Text && button2Text != '')}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"paddingTop\": \"@detailButtonTopBottomPadding\",\n\t\t\t\t\t\t\t\t\t\"paddingBottom\": \"${(detailType == 'recipe' && (@viewportProfile == @hubLandscapeXLarge || @viewportProfile == @hubPortraitMedium)) ? 0 : @detailButtonTopBottomPadding}\",\n\t\t\t\t\t\t\t\t\t\"direction\": \"@detailButtonArrayAlignmentDirection\",\n\t\t\t\t\t\t\t\t\t\"width\": \"100%\",\n\t\t\t\t\t\t\t\t\t\"data\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${button1Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"buttonText\": \"${button1Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"buttonStyle\": \"${button1Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryAction\": \"${button1PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"accessibilityLabel\": \"${button1AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"maxWidth\": \"${(button2Text && @detailButtonArrayAlignmentDirection == 'row') ? '50%' : '100%'}\"\n\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${button2Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"buttonText\": \"${button2Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"buttonStyle\": \"${button2Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryAction\": \"${button2PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"accessibilityLabel\": \"${button2AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"maxWidth\": \"${(button1Text && @detailButtonArrayAlignmentDirection == 'row') ? '50%' : '100%'}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"when\": \"${data.buttonText && data.buttonText != ''}\",\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaButton\",\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${data.theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"buttonText\": \"${data.buttonText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"buttonStyle\": \"${data.buttonStyle}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryAction\": \"${data.primaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"accessibilityLabel\": \"${data.accessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"maxWidth\": \"${data.maxWidth}\",\n\t\t\t\t\t\t\t\t\t\t\t\"alignSelf\": \"@detailButtonArrayAlignment\",\n\t\t\t\t\t\t\t\t\t\t\t\"lang\": \"${lang}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType == 'recipe' && ingredientsText && ingredientsText != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\"style\": \"@detailIngredientsTextStyle\",\n\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\"textAlign\": \"${textAlignStart}\",\n\t\t\t\t\t\t\t\t\t\"text\": \"${ingredientsText}\",\n\t\t\t\t\t\t\t\t\t\"paddingTop\": \"@detailContentBlockIngredientTopPadding\",\n\t\t\t\t\t\t\t\t\t\"maxLines\": 1\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType == 'recipe' && ingredientListItems && ingredientListItems != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"numbered\": true,\n\t\t\t\t\t\t\t\t\t\"data\": \"${ingredientListItems}\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaTextListItem\",\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"hideDivider\": \"${ingredientsHideDivider}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryText\": \"${data.ingredientsContentText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryAction\": \"${data.ingredientsPrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"touchForward\": true,\n\t\t\t\t\t\t\t\t\t\t\t\"hideHorizontalMargin\": true,\n\t\t\t\t\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"when\": \"${detailType != 'recipe' && bodyText && bodyText != ''}\",\n\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\"style\": \"@detailBodyTextStyle\",\n\t\t\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\t\t\"textAlign\": \"@detailBodyTextAlignment\",\n\t\t\t\t\t\t\t\t\t\"text\": \"${bodyText}\",\n\t\t\t\t\t\t\t\t\t\"paddingTop\": \"${detailType == 'location' ? @detailButtonTopBottomPadding : 0}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"when\": \"${@viewportProfile == @tvLandscapeOverlay && (headerAttributionImage || headerAttributionText)}\",\n\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\"justifyContent\": \"start\",\n\t\t\t\t\t\t\t\"alignItems\": \"end\",\n\t\t\t\t\t\t\t\"paddingTop\": \"${@spacingLarge + @fontSizeSmall/2 - @headerAttributionImageHeight/2}\",\n\t\t\t\t\t\t\t\"item\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"maxWidth\": \"@headerAttributionImageMaxWidth\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"when\": \"${!headerAttributionImage}\",\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\t\t\t\t\"text\": \"${headerAttributionText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"textAlign\": \"${aplVersion >= 1.7 ? 'end' : (layoutDirection == 'RTL' ? 'left' : 'right')}\",\n\t\t\t\t\t\t\t\t\t\t\t\"maxLines\": 1,\n\t\t\t\t\t\t\t\t\t\t\t\"opacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\t\t\t\t\t\t\"style\": \"textStyleCallout\",\n\t\t\t\t\t\t\t\t\t\t\t\"color\": \"${theme != 'light' ? '@colorTextSecondary' : '@colorTextSecondaryReversed'}\"\n\t\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"when\": \"${headerAttributionImage}\",\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"Image\",\n\t\t\t\t\t\t\t\t\t\t\t\"source\": \"${headerAttributionImage}\",\n\t\t\t\t\t\t\t\t\t\t\t\"scale\": \"best-fit\",\n\t\t\t\t\t\t\t\t\t\t\t\"opacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\t\t\t\t\t\t\"align\": \"right\",\n\t\t\t\t\t\t\t\t\t\t\t\"maxWidth\": \"@headerAttributionImageMaxWidth\",\n\t\t\t\t\t\t\t\t\t\t\t\"height\": \"@headerAttributionImageHeight\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"AlexaDetailImageBlock\": {\n\t\t\t\"description\": \"the image block.\",\n\t\t\t\"parameters\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageHeight\",\n\t\t\t\t\t\"description\": \"Dimension value to set image height\",\n\t\t\t\t\t\"type\": \"dimension\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageAspectRatio\",\n\t\t\t\t\t\"description\": \"Aspect ratio of the image. Options are square, round, standard_landscape, standard_portrait, poster_landscape, poster_portrait, widescreen. Default to square\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"square\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageScale\",\n\t\t\t\t\t\"description\": \"Scale setting for the image. Options are none, fill, best-fit, best-fill, best-fit-down. Default to best-fit\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"best-fit\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageAlignment\",\n\t\t\t\t\t\"description\": \"Alignment setting for the image. Options are bottom, bottom-left, bottom-right, center, left, right, top, top-left, top-right. Default to center\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"center\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageRoundedCorner\",\n\t\t\t\t\t\"description\": \"Whether to use rounded corners for the image\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageBlurredBackground\",\n\t\t\t\t\t\"description\": \"Set a blurred version of the image to appear behind the image to create a visually consistent container size\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageSource\",\n\t\t\t\t\t\"description\": \"URI for the image\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageCaption\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Image caption text in the image block, under the image, for TV overlay landscape & TV overlay portrait.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageShadow\",\n\t\t\t\t\t\"description\": \"Boolean to turn the drop shadow on or off on the image\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"bind\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"aplVersion\",\n\t\t\t\t\t\"value\": \"${environment.aplVersion}\",\n\t\t\t\t\t\"type\": \"number\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"items\": [\n\t\t\t\t{\n\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\"paddingTop\": \"@detailImageBlockTopPadding\",\n\t\t\t\t\t\"alignItems\": \"start\",\n\t\t\t\t\t\"direction\": \"column\",\n\t\t\t\t\t\"justifyContent\": \"start\",\n\t\t\t\t\t\"alignSelf\": \"auto\",\n\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"AlexaImage\",\n\t\t\t\t\t\t\t\"imageWidth\": \"${imageAspectRatio == 'square' ? '@detailImageSquareWidth' : (imageAspectRatio == 'round' ? '@detailImageRoundWidth' : (imageAspectRatio == 'standard_landscape' ? '@detailStandardLandscapeWidth' : (imageAspectRatio == 'standard_portrait' ? '@detailStandardPortraitWidth' : (imageAspectRatio == 'poster_landscape' ? '@detailPosterLandscapeWidth' : (imageAspectRatio == 'poster_portrait' ? '@detailPosterPortraitWidth' : '@detailWideScreenWidth')))))}\",\n\t\t\t\t\t\t\t\"imageHeight\": \"${imageHeight}\",\n\t\t\t\t\t\t\t\"imageAspectRatio\": \"${imageAspectRatio}\",\n\t\t\t\t\t\t\t\"imageScale\": \"${imageScale}\",\n\t\t\t\t\t\t\t\"imageAlignment\": \"${imageAlignment}\",\n\t\t\t\t\t\t\t\"imageRoundedCorner\": \"${imageRoundedCorner}\",\n\t\t\t\t\t\t\t\"imageBlurredBackground\": \"${imageBlurredBackground}\",\n\t\t\t\t\t\t\t\"imageSource\": \"${imageSource}\",\n\t\t\t\t\t\t\t\"imageShadow\": \"${imageShadow}\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"when\": \"${@viewportProfile != @tvLandscapeOverlay}\",\n\t\t\t\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\t\t\t\"style\": \"textStyleCaption\",\n\t\t\t\t\t\t\t\"textAlign\": \"${textAlignStart}\",\n\t\t\t\t\t\t\t\"color\": \"${theme == 'light' ? '@colorTextReversed' : '@colorText'}\",\n\t\t\t\t\t\t\t\"maxLines\": 1,\n\t\t\t\t\t\t\t\"text\": \"${imageCaption}\",\n\t\t\t\t\t\t\t\"opacity\": \"@detailImageCaptionOpacity\",\n\t\t\t\t\t\t\t\"maxWidth\": \"${imageAspectRatio == 'square' ? '@detailImageSquareWidth' : (imageAspectRatio == 'round' ? '@detailImageRoundWidth' : (imageAspectRatio == 'standard_landscape' ? '@detailStandardLandscapeWidth' : (imageAspectRatio == 'standard_portrait' ? '@detailStandardPortraitWidth' : (imageAspectRatio == 'poster_landscape' ? '@detailPosterLandscapeWidth' : (imageAspectRatio == 'poster_portrait' ? '@detailPosterPortraitWidth' : '@detailWideScreenWidth')))))}\",\n\t\t\t\t\t\t\t\"paddingTop\": \"@detailImageBottomPadding\"\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"AlexaDetail\": {\n\t\t\t\"description\": \"Alexa Detail is used to display information about an entity, such as a person, place, thing, or event. In this case, we've outlined four variations: Generic, Movies & TV, Location, and Recipe. Detail is optimized for long-form structured content with a short voice synopsis.\",\n\t\t\t\"parameters\": [\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"detailType\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"There are 4 different types of layout to select: generic, moviesTV, location, recipe. Default to generic.\",\n\t\t\t\t\t\"default\": \"generic\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"detailImageAlignment\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Image alignment on the layout, can be start or end. Default to start.\",\n\t\t\t\t\t\"default\": \"start\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundColor\",\n\t\t\t\t\t\"description\": \"Color value to use as background color for layout.\",\n\t\t\t\t\t\"type\": \"color\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundImageSource\",\n\t\t\t\t\t\"description\": \"URL for background image source.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundVideoSource\",\n\t\t\t\t\t\"description\": \"URL for background video source.\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundScale\",\n\t\t\t\t\t\"description\": \"Image/video scale to apply to background image/video. Defaults to best-fill.\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"best-fill\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundAlign\",\n\t\t\t\t\t\"description\": \"Image/video alignment to apply to background image/video. Defaults to center.\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"center\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundBlur\",\n\t\t\t\t\t\"description\": \"Toggle to apply background blur. Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundOverlayNoise\",\n\t\t\t\t\t\"description\": \"Toggle to apply noise to background image. Defaults to false\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundColorOverlay\",\n\t\t\t\t\t\"description\": \"Toggle to apply overlay scrim to background image/video. Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundOverlayGradient\",\n\t\t\t\t\t\"description\": \"Toggle to apply gradient to background image/video. Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundVideoAutoPlay\",\n\t\t\t\t\t\"description\": \"Toggle to autoplay background video(s). Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"backgroundVideoAudioTrack\",\n\t\t\t\t\t\"description\": \"Audio track to play on. Defaults to foreground. EM can select foreground | background | none.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"theme\",\n\t\t\t\t\t\"description\": \"Colors will be switched depending on the specified theme (light/dark). Default to dark theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"dark\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionOpacity\",\n\t\t\t\t\t\"type\": \"number\",\n\t\t\t\t\t\"default\": \"${@viewportProfileCategory == @hubRound ? 1 : @opacitySecondary}\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerTitle\",\n\t\t\t\t\t\"description\": \"Primary text to render in header.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerSubtitle\",\n\t\t\t\t\t\"description\": \"Secondary text to render in header.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionText\",\n\t\t\t\t\t\"description\": \"Attribution text to render in header.  Only shown when no headerAttributionImage is provided, and when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionImage\",\n\t\t\t\t\t\"description\": \"URL for attribution image source. Only shown when headerAttributionPrimacy is true, or on a device that shows Title/Subtitle and Attribution.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerAttributionPrimacy\",\n\t\t\t\t\t\"description\": \"On devices that can only display one element due to screen size, Attribution is prioritized. Setting False displays Title/Subtitle.  Defaults to true.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerDivider\",\n\t\t\t\t\t\"description\": \"Toggle to display the divider that appears at the bottom of header to help separate it from the content below. Default to false\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButton\",\n\t\t\t\t\t\"description\": \"Toggle to display back button in header.  Defaults to false.\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButtonAccessibilityLabel\",\n\t\t\t\t\t\"description\": \"An accessibility label to describe the back button to customers who use a screen reader.\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackButtonCommand\",\n\t\t\t\t\t\"description\": \"Command that is issued when back button is pressed.\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"default\": {\n\t\t\t\t\t\t\"type\": \"SendEvent\",\n\t\t\t\t\t\t\"arguments\": [\n\t\t\t\t\t\t\t\"goBack\"\n\t\t\t\t\t\t]\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"headerBackgroundColor\",\n\t\t\t\t\t\"description\": \"Optional color value to use as background color for Header. Defaults to transparent.\",\n\t\t\t\t\t\"type\": \"color\",\n\t\t\t\t\t\"default\": \"transparent\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingSlotPadding\",\n\t\t\t\t\t\"type\": \"dimension\",\n\t\t\t\t\t\"description\": \"The adjustable padding between rating item.\",\n\t\t\t\t\t\"default\": \"3dp\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingSlotMode\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The mode for single-asset or multiple-asset.\",\n\t\t\t\t\t\"default\": \"multiple\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingGraphicType\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The type for the rating graphic, options are AVG or image. If user selected image, they need to supply resource in the graphic parameters. Default to AVG if no valued provided.\",\n\t\t\t\t\t\"default\": \"AVG\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"singleRatingGraphicWidth\",\n\t\t\t\t\t\"type\": \"dimension\",\n\t\t\t\t\t\"description\": \"The width for single rating graphic.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingNumber\",\n\t\t\t\t\t\"type\": \"number\",\n\t\t\t\t\t\"description\": \"The rating for rendering stars\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"singleRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for rating graphic.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"fullRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for full rating AVG. Default to full AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"halfRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for half rating AVG. Default to half AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"emptyRatingGraphic\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The resource for empty rating AVG. Default to empty AVG icon if no value provided.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ratingText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown besides the rating.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageHeight\",\n\t\t\t\t\t\"description\": \"Dimension value to set image height\",\n\t\t\t\t\t\"type\": \"dimension\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageAspectRatio\",\n\t\t\t\t\t\"description\": \"Aspect ratio of the image. Options are square, round, standard_landscape, standard_portrait, poster_landscape, poster_portrait, widescreen. Default to square\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"square\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageScale\",\n\t\t\t\t\t\"description\": \"Scale setting for the image. Options are none, fill, best-fit, best-fill, best-fit-down. Default to best-fit\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"best-fit\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageAlignment\",\n\t\t\t\t\t\"description\": \"Alignment setting for the image. Options are bottom, bottom-left, bottom-right, center, left, right, top, top-left, top-right. Default to center\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"center\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageRoundedCorner\",\n\t\t\t\t\t\"description\": \"Whether to use rounded corners for the image\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageBlurredBackground\",\n\t\t\t\t\t\"description\": \"Set a blurred version of the image to appear behind the image to create a visually consistent container size\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": false\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageSource\",\n\t\t\t\t\t\"description\": \"URI for the image\",\n\t\t\t\t\t\"type\": \"string\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"primaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The primary text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"secondaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The secondary text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"tertiaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The tertiary text shown in the content block, this will only show up when detailType is moviesTV.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"quaternaryText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The quaternary text shown in the content block, this will only show up when detailType is moviesTV.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"locationText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The location text shown in the content block, this will only show up when detailType is location.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"bodyText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The body text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Colors of button 1 will be switched depend on the specified theme (light/dark). Default to dark theme\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Theme\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Colors of button 2 will be switched depend on the specified theme (light/dark). Default to dark theme\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Text\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown on button 1 the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Text\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The text shown on button 1 the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1Style\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The button style of button 1 the content block, can be outlined or contained. Defaults to contained.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2Style\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The button style of button 2 the content block, can be outlined or contained. Defaults to contained.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1PrimaryAction\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The action of button 1 that is triggered when the Button is selected.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2PrimaryAction\",\n\t\t\t\t\t\"type\": \"any\",\n\t\t\t\t\t\"description\": \"The action of button 2 that is triggered when the Button is selected.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button1AccessibilityLabel\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Voice over will read this string when the user selects button 1.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"button2AccessibilityLabel\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"Voice over will read this string when the user selects button 2.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientsText\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The ingredients title text shown in the content block.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientListItems\",\n\t\t\t\t\t\"description\": \"Array of list item datasources to present in the ingredient list.  See documentation on list item datasources for required data signature.\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"ingredientsHideDivider\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"description\": \"Toggle to hide the divider that appears at the bottom of each item to help separate it from the content below. Default to false.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageCaption\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The image caption is a title or brief explanation of the image.\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"entities\",\n\t\t\t\t\t\"description\": \"Array of entity data bind to this layout\",\n\t\t\t\t\t\"type\": \"any\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"scrollViewId\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"description\": \"The id for scrollView\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"imageShadow\",\n\t\t\t\t\t\"description\": \"Boolean to turn the drop shadow on or off on the image\",\n\t\t\t\t\t\"type\": \"boolean\",\n\t\t\t\t\t\"default\": true\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"layoutDirection\",\n\t\t\t\t\t\"description\": \"The layoutDirection property of AlexaDetail. It can be LTR or RTL. By default, it uses environment layoutDirection.\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"${environment.layoutDirection}\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"name\": \"lang\",\n\t\t\t\t\t\"description\": \"The lang property of AlexaDetail. Set the lang property to a BCP-47 string (e.g., en-US). By default, it uses environment lang.\",\n\t\t\t\t\t\"type\": \"string\",\n\t\t\t\t\t\"default\": \"${environment.lang}\"\n\t\t\t\t}\n\t\t\t],\n\t\t\t\"items\": [\n\t\t\t\t{\n\t\t\t\t\t\"when\": \"${@viewportProfile == @tvLandscapeOverlay && (detailImageAlignment == 'left' || detailImageAlignment == 'start')}\",\n\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\"width\": \"100%\",\n\t\t\t\t\t\"direction\": \"row\",\n\t\t\t\t\t\"entities\": \"${entities}\",\n\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"AlexaBackground\",\n\t\t\t\t\t\t\t\"backgroundColor\": \"${backgroundColor}\",\n\t\t\t\t\t\t\t\"backgroundImageSource\": \"${backgroundImageSource}\",\n\t\t\t\t\t\t\t\"backgroundVideoSource\": \"${backgroundVideoSource}\",\n\t\t\t\t\t\t\t\"backgroundScale\": \"${backgroundScale}\",\n\t\t\t\t\t\t\t\"backgroundAlign\": \"${backgroundAlign}\",\n\t\t\t\t\t\t\t\"backgroundBlur\": \"${backgroundBlur}\",\n\t\t\t\t\t\t\t\"overlayNoise\": \"${backgroundOverlayNoise}\",\n\t\t\t\t\t\t\t\"colorOverlay\": \"${backgroundColorOverlay}\",\n\t\t\t\t\t\t\t\"overlayGradient\": \"${backgroundOverlayGradient}\",\n\t\t\t\t\t\t\t\"videoAutoPlay\": \"${backgroundVideoAutoPlay}\",\n\t\t\t\t\t\t\t\"videoAudioTrack\": \"${backgroundVideoAudioTrack}\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\"paddingStart\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"paddingEnd\": \"0\",\n\t\t\t\t\t\t\t\"paddingLeft\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"AlexaDetailImageBlock\",\n\t\t\t\t\t\t\t\t\t\"imageHeight\": \"${imageHeight}\",\n\t\t\t\t\t\t\t\t\t\"imageAspectRatio\": \"${imageAspectRatio}\",\n\t\t\t\t\t\t\t\t\t\"imageScale\": \"${imageScale}\",\n\t\t\t\t\t\t\t\t\t\"imageShadow\": \"${imageShadow}\",\n\t\t\t\t\t\t\t\t\t\"imageAlignment\": \"${imageAlignment}\",\n\t\t\t\t\t\t\t\t\t\"imageRoundedCorner\": \"${imageRoundedCorner}\",\n\t\t\t\t\t\t\t\t\t\"imageBlurredBackground\": \"${imageBlurredBackground}\",\n\t\t\t\t\t\t\t\t\t\"imageSource\": \"${imageSource}\",\n\t\t\t\t\t\t\t\t\t\"imageCaption\": \"${imageCaption}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"ScrollView\",\n\t\t\t\t\t\t\t\"id\": \"${scrollViewId}\",\n\t\t\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\t\t\"width\": \"100%\",\n\t\t\t\t\t\t\t\"shrink\": 1,\n\t\t\t\t\t\t\t\"paddingEnd\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"paddingStart\": \"@spacingXLarge\",\n\t\t\t\t\t\t\t\"paddingLeft\": \"@spacingXLarge\",\n\t\t\t\t\t\t\t\"paddingRight\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"onScroll\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"SetValue\",\n\t\t\t\t\t\t\t\t\t\"componentId\": \"headerdivider\",\n\t\t\t\t\t\t\t\t\t\"property\": \"opacity\",\n\t\t\t\t\t\t\t\t\t\"value\": \"${event.source.position == 0 ? 0 : 1}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"width\": \"100%\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaDetailContentBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerTitle\": \"${headerTitle}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionText\": \"${headerAttributionText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionOpacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionImage\": \"${headerAttributionImage}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerDivider\": \"${headerDivider}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackButton\": \"${headerBackButton}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackButtonAccessibilityLabel\": \"${headerBackButtonAccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackButtonCommand\": \"${headerBackButtonCommand}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackgroundColor\": \"${headerBackgroundColor}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotPadding\": \"${ratingSlotPadding}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotMode\": \"${ratingSlotMode}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingGraphicType\": \"${ratingGraphicType}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphicWidth\": \"${singleRatingGraphicWidth}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingNumber\": \"${ratingNumber}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphic\": \"${singleRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"fullRatingGraphic\": \"${fullRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"halfRatingGraphic\": \"${halfRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"emptyRatingGraphic\": \"${emptyRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingText\": \"${ratingText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryText\": \"${primaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"secondaryText\": \"${secondaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"tertiaryText\": \"${tertiaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"quaternaryText\": \"${quaternaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"locationText\": \"${locationText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Theme\": \"${button1Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Theme\": \"${button2Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Text\": \"${button1Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Text\": \"${button2Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Style\": \"${button1Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Style\": \"${button2Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1PrimaryAction\": \"${button1PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2PrimaryAction\": \"${button2PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1AccessibilityLabel\": \"${button1AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2AccessibilityLabel\": \"${button2AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"bodyText\": \"${bodyText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsText\": \"${ingredientsText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientListItems\": \"${ingredientListItems}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsHideDivider\": \"${ingredientsHideDivider}\",\n\t\t\t\t\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\t\t\t\t\t\t\"lang\": \"${lang}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"when\": \"${@viewportProfile == @tvLandscapeOverlay && (detailImageAlignment == 'right' || detailImageAlignment == 'end')}\",\n\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\"direction\": \"row\",\n\t\t\t\t\t\"entities\": \"${entities}\",\n\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"AlexaBackground\",\n\t\t\t\t\t\t\t\"backgroundColor\": \"${backgroundColor}\",\n\t\t\t\t\t\t\t\"backgroundImageSource\": \"${backgroundImageSource}\",\n\t\t\t\t\t\t\t\"backgroundVideoSource\": \"${backgroundVideoSource}\",\n\t\t\t\t\t\t\t\"backgroundScale\": \"${backgroundScale}\",\n\t\t\t\t\t\t\t\"backgroundAlign\": \"${backgroundAlign}\",\n\t\t\t\t\t\t\t\"backgroundBlur\": \"${backgroundBlur}\",\n\t\t\t\t\t\t\t\"overlayNoise\": \"${backgroundOverlayNoise}\",\n\t\t\t\t\t\t\t\"colorOverlay\": \"${backgroundColorOverlay}\",\n\t\t\t\t\t\t\t\"overlayGradient\": \"${backgroundOverlayGradient}\",\n\t\t\t\t\t\t\t\"videoAutoPlay\": \"${backgroundVideoAutoPlay}\",\n\t\t\t\t\t\t\t\"videoAudioTrack\": \"${backgroundVideoAudioTrack}\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"ScrollView\",\n\t\t\t\t\t\t\t\"id\": \"${scrollViewId}\",\n\t\t\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\t\t\"shrink\": 1,\n\t\t\t\t\t\t\t\"width\": \"${@detailContentBlockMaxWidth + (2 * @headerHorizontalMarginRight) + @marginHorizontal}\",\n\t\t\t\t\t\t\t\"paddingStart\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"paddingEnd\": \"0\",\n\t\t\t\t\t\t\t\"paddingLeft\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"onScroll\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"SetValue\",\n\t\t\t\t\t\t\t\t\t\"componentId\": \"headerdivider\",\n\t\t\t\t\t\t\t\t\t\"property\": \"opacity\",\n\t\t\t\t\t\t\t\t\t\"value\": \"${event.source.position == 0 ? 0 : 1}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"width\": \"100%\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaDetailContentBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerTitle\": \"${headerTitle}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionText\": \"${headerAttributionText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionOpacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionImage\": \"${headerAttributionImage}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotPadding\": \"${ratingSlotPadding}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotMode\": \"${ratingSlotMode}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingGraphicType\": \"${ratingGraphicType}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphicWidth\": \"${singleRatingGraphicWidth}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingNumber\": \"${ratingNumber}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphic\": \"${singleRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"fullRatingGraphic\": \"${fullRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"halfRatingGraphic\": \"${halfRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"emptyRatingGraphic\": \"${emptyRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingText\": \"${ratingText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryText\": \"${primaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"secondaryText\": \"${secondaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"tertiaryText\": \"${tertiaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"quaternaryText\": \"${quaternaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"locationText\": \"${locationText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Theme\": \"${button1Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Theme\": \"${button2Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Text\": \"${button1Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Text\": \"${button2Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Style\": \"${button1Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Style\": \"${button2Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1PrimaryAction\": \"${button1PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2PrimaryAction\": \"${button2PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1AccessibilityLabel\": \"${button1AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2AccessibilityLabel\": \"${button2AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsText\": \"${ingredientsText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientListItems\": \"${ingredientListItems}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsHideDivider\": \"${ingredientsHideDivider}\",\n\t\t\t\t\t\t\t\t\t\t\t\"bodyText\": \"${bodyText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\t\t\t\t\t\t\"lang\": \"${lang}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\"paddingStart\": \"@spacingXLarge\",\n\t\t\t\t\t\t\t\"paddingEnd\": \"0\",\n\t\t\t\t\t\t\t\"paddingLeft\": \"@spacingXLarge\",\n\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"AlexaDetailImageBlock\",\n\t\t\t\t\t\t\t\t\t\"imageHeight\": \"${imageHeight}\",\n\t\t\t\t\t\t\t\t\t\"imageAspectRatio\": \"${imageAspectRatio}\",\n\t\t\t\t\t\t\t\t\t\"imageScale\": \"${imageScale}\",\n\t\t\t\t\t\t\t\t\t\"imageShadow\": \"${imageShadow}\",\n\t\t\t\t\t\t\t\t\t\"imageAlignment\": \"${imageAlignment}\",\n\t\t\t\t\t\t\t\t\t\"imageRoundedCorner\": \"${imageRoundedCorner}\",\n\t\t\t\t\t\t\t\t\t\"imageBlurredBackground\": \"${imageBlurredBackground}\",\n\t\t\t\t\t\t\t\t\t\"imageSource\": \"${imageSource}\",\n\t\t\t\t\t\t\t\t\t\"imageCaption\": \"${imageCaption}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"when\": \"${(@viewportProfileCategory == @hubLandscape || @viewportProfileGroup == @tv || @viewportProfileGroup == @mobile) && (detailImageAlignment == 'left' || detailImageAlignment == 'start')}\",\n\t\t\t\t\t\"type\": \"AlexaDetailImageLeftVersion\",\n\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\"headerTitle\": \"${headerTitle}\",\n\t\t\t\t\t\"headerSubtitle\": \"${headerSubtitle}\",\n\t\t\t\t\t\"headerAttributionText\": \"${headerAttributionText}\",\n\t\t\t\t\t\"headerAttributionOpacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\"headerAttributionImage\": \"${headerAttributionImage}\",\n\t\t\t\t\t\"headerAttributionPrimacy\": \"${headerAttributionPrimacy}\",\n\t\t\t\t\t\"headerDivider\": \"${headerDivider}\",\n\t\t\t\t\t\"headerBackButton\": \"${headerBackButton}\",\n\t\t\t\t\t\"headerBackButtonAccessibilityLabel\": \"${headerBackButtonAccessibilityLabel}\",\n\t\t\t\t\t\"headerBackButtonCommand\": \"${headerBackButtonCommand}\",\n\t\t\t\t\t\"headerBackgroundColor\": \"${headerBackgroundColor}\",\n\t\t\t\t\t\"backgroundColor\": \"${backgroundColor}\",\n\t\t\t\t\t\"backgroundImageSource\": \"${backgroundImageSource}\",\n\t\t\t\t\t\"backgroundVideoSource\": \"${backgroundVideoSource}\",\n\t\t\t\t\t\"backgroundScale\": \"${backgroundScale}\",\n\t\t\t\t\t\"backgroundAlign\": \"${backgroundAlign}\",\n\t\t\t\t\t\"backgroundBlur\": \"${backgroundBlur}\",\n\t\t\t\t\t\"backgroundOverlayNoise\": \"${backgroundOverlayNoise}\",\n\t\t\t\t\t\"backgroundColorOverlay\": \"${backgroundColorOverlay}\",\n\t\t\t\t\t\"backgroundOverlayGradient\": \"${backgroundOverlayGradient}\",\n\t\t\t\t\t\"backgroundVideoAutoPlay\": \"${backgroundVideoAutoPlay}\",\n\t\t\t\t\t\"backgroundVideoAudioTrack\": \"${backgroundVideoAudioTrack}\",\n\t\t\t\t\t\"ratingSlotPadding\": \"${ratingSlotPadding}\",\n\t\t\t\t\t\"ratingSlotMode\": \"${ratingSlotMode}\",\n\t\t\t\t\t\"ratingGraphicType\": \"${ratingGraphicType}\",\n\t\t\t\t\t\"singleRatingGraphicWidth\": \"${singleRatingGraphicWidth}\",\n\t\t\t\t\t\"ratingNumber\": \"${ratingNumber}\",\n\t\t\t\t\t\"singleRatingGraphic\": \"${singleRatingGraphic}\",\n\t\t\t\t\t\"fullRatingGraphic\": \"${fullRatingGraphic}\",\n\t\t\t\t\t\"halfRatingGraphic\": \"${halfRatingGraphic}\",\n\t\t\t\t\t\"emptyRatingGraphic\": \"${emptyRatingGraphic}\",\n\t\t\t\t\t\"ratingText\": \"${ratingText}\",\n\t\t\t\t\t\"imageHeight\": \"${imageHeight}\",\n\t\t\t\t\t\"imageAspectRatio\": \"${imageAspectRatio}\",\n\t\t\t\t\t\"imageScale\": \"${imageScale}\",\n\t\t\t\t\t\"imageShadow\": \"${imageShadow}\",\n\t\t\t\t\t\"imageAlignment\": \"${imageAlignment}\",\n\t\t\t\t\t\"imageRoundedCorner\": \"${imageRoundedCorner}\",\n\t\t\t\t\t\"imageBlurredBackground\": \"${imageBlurredBackground}\",\n\t\t\t\t\t\"imageSource\": \"${imageSource}\",\n\t\t\t\t\t\"primaryText\": \"${primaryText}\",\n\t\t\t\t\t\"secondaryText\": \"${secondaryText}\",\n\t\t\t\t\t\"tertiaryText\": \"${tertiaryText}\",\n\t\t\t\t\t\"quaternaryText\": \"${quaternaryText}\",\n\t\t\t\t\t\"locationText\": \"${locationText}\",\n\t\t\t\t\t\"button1Theme\": \"${button1Theme}\",\n\t\t\t\t\t\"button2Theme\": \"${button2Theme}\",\n\t\t\t\t\t\"button1Text\": \"${button1Text}\",\n\t\t\t\t\t\"button2Text\": \"${button2Text}\",\n\t\t\t\t\t\"button1Style\": \"${button1Style}\",\n\t\t\t\t\t\"button2Style\": \"${button2Style}\",\n\t\t\t\t\t\"button1PrimaryAction\": \"${button1PrimaryAction}\",\n\t\t\t\t\t\"button2PrimaryAction\": \"${button2PrimaryAction}\",\n\t\t\t\t\t\"button1AccessibilityLabel\": \"${button1AccessibilityLabel}\",\n\t\t\t\t\t\"button2AccessibilityLabel\": \"${button2AccessibilityLabel}\",\n\t\t\t\t\t\"bodyText\": \"${bodyText}\",\n\t\t\t\t\t\"ingredientsText\": \"${ingredientsText}\",\n\t\t\t\t\t\"ingredientListItems\": \"${ingredientListItems}\",\n\t\t\t\t\t\"ingredientsHideDivider\": \"${ingredientsHideDivider}\",\n\t\t\t\t\t\"imageCaption\": \"${imageCaption}\",\n\t\t\t\t\t\"entities\": \"${entities}\",\n\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\"lang\": \"${lang}\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"when\": \"${(@viewportProfileCategory == @hubLandscape || @viewportProfileGroup == @tv || @viewportProfileGroup == @mobile) && (detailImageAlignment == 'right' || detailImageAlignment == 'end')}\",\n\t\t\t\t\t\"type\": \"AlexaDetailImageRightVersion\",\n\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\"headerTitle\": \"${headerTitle}\",\n\t\t\t\t\t\"headerSubtitle\": \"${headerSubtitle}\",\n\t\t\t\t\t\"headerAttributionText\": \"${headerAttributionText}\",\n\t\t\t\t\t\"headerAttributionImage\": \"${headerAttributionImage}\",\n\t\t\t\t\t\"headerAttributionPrimacy\": \"${headerAttributionPrimacy}\",\n\t\t\t\t\t\"headerDivider\": \"${headerDivider}\",\n\t\t\t\t\t\"headerBackButton\": \"${headerBackButton}\",\n\t\t\t\t\t\"headerBackButtonAccessibilityLabel\": \"${headerBackButtonAccessibilityLabel}\",\n\t\t\t\t\t\"headerBackButtonCommand\": \"${headerBackButtonCommand}\",\n\t\t\t\t\t\"headerAttributionOpacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\"headerBackgroundColor\": \"${headerBackgroundColor}\",\n\t\t\t\t\t\"backgroundColor\": \"${backgroundColor}\",\n\t\t\t\t\t\"backgroundImageSource\": \"${backgroundImageSource}\",\n\t\t\t\t\t\"backgroundVideoSource\": \"${backgroundVideoSource}\",\n\t\t\t\t\t\"backgroundScale\": \"${backgroundScale}\",\n\t\t\t\t\t\"backgroundAlign\": \"${backgroundAlign}\",\n\t\t\t\t\t\"backgroundBlur\": \"${backgroundBlur}\",\n\t\t\t\t\t\"backgroundOverlayNoise\": \"${backgroundOverlayNoise}\",\n\t\t\t\t\t\"backgroundColorOverlay\": \"${backgroundColorOverlay}\",\n\t\t\t\t\t\"backgroundOverlayGradient\": \"${backgroundOverlayGradient}\",\n\t\t\t\t\t\"backgroundVideoAutoPlay\": \"${backgroundVideoAutoPlay}\",\n\t\t\t\t\t\"backgroundVideoAudioTrack\": \"${backgroundVideoAudioTrack}\",\n\t\t\t\t\t\"ratingSlotPadding\": \"${ratingSlotPadding}\",\n\t\t\t\t\t\"ratingSlotMode\": \"${ratingSlotMode}\",\n\t\t\t\t\t\"ratingGraphicType\": \"${ratingGraphicType}\",\n\t\t\t\t\t\"singleRatingGraphicWidth\": \"${singleRatingGraphicWidth}\",\n\t\t\t\t\t\"ratingNumber\": \"${ratingNumber}\",\n\t\t\t\t\t\"singleRatingGraphic\": \"${singleRatingGraphic}\",\n\t\t\t\t\t\"fullRatingGraphic\": \"${fullRatingGraphic}\",\n\t\t\t\t\t\"halfRatingGraphic\": \"${halfRatingGraphic}\",\n\t\t\t\t\t\"emptyRatingGraphic\": \"${emptyRatingGraphic}\",\n\t\t\t\t\t\"ratingText\": \"${ratingText}\",\n\t\t\t\t\t\"imageHeight\": \"${imageHeight}\",\n\t\t\t\t\t\"imageAspectRatio\": \"${imageAspectRatio}\",\n\t\t\t\t\t\"imageScale\": \"${imageScale}\",\n\t\t\t\t\t\"imageShadow\": \"${imageShadow}\",\n\t\t\t\t\t\"imageAlignment\": \"${imageAlignment}\",\n\t\t\t\t\t\"imageRoundedCorner\": \"${imageRoundedCorner}\",\n\t\t\t\t\t\"imageBlurredBackground\": \"${imageBlurredBackground}\",\n\t\t\t\t\t\"imageSource\": \"${imageSource}\",\n\t\t\t\t\t\"primaryText\": \"${primaryText}\",\n\t\t\t\t\t\"secondaryText\": \"${secondaryText}\",\n\t\t\t\t\t\"tertiaryText\": \"${tertiaryText}\",\n\t\t\t\t\t\"quaternaryText\": \"${quaternaryText}\",\n\t\t\t\t\t\"locationText\": \"${locationText}\",\n\t\t\t\t\t\"button1Theme\": \"${button1Theme}\",\n\t\t\t\t\t\"button2Theme\": \"${button2Theme}\",\n\t\t\t\t\t\"button1Text\": \"${button1Text}\",\n\t\t\t\t\t\"button2Text\": \"${button2Text}\",\n\t\t\t\t\t\"button1Style\": \"${button1Style}\",\n\t\t\t\t\t\"button2Style\": \"${button2Style}\",\n\t\t\t\t\t\"button1PrimaryAction\": \"${button1PrimaryAction}\",\n\t\t\t\t\t\"button2PrimaryAction\": \"${button2PrimaryAction}\",\n\t\t\t\t\t\"button1AccessibilityLabel\": \"${button1AccessibilityLabel}\",\n\t\t\t\t\t\"button2AccessibilityLabel\": \"${button2AccessibilityLabel}\",\n\t\t\t\t\t\"bodyText\": \"${bodyText}\",\n\t\t\t\t\t\"ingredientsText\": \"${ingredientsText}\",\n\t\t\t\t\t\"ingredientListItems\": \"${ingredientListItems}\",\n\t\t\t\t\t\"ingredientsHideDivider\": \"${ingredientsHideDivider}\",\n\t\t\t\t\t\"imageCaption\": \"${imageCaption}\",\n\t\t\t\t\t\"entities\": \"${entities}\",\n\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\"lang\": \"${lang}\"\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"when\": \"${@viewportProfileCategory == @hubRound}\",\n\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\"entities\": \"${entities}\",\n\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"AlexaBackground\",\n\t\t\t\t\t\t\t\"backgroundColor\": \"${backgroundColor}\",\n\t\t\t\t\t\t\t\"backgroundImageSource\": \"${backgroundImageSource}\",\n\t\t\t\t\t\t\t\"backgroundVideoSource\": \"${backgroundVideoSource}\",\n\t\t\t\t\t\t\t\"backgroundScale\": \"${backgroundScale}\",\n\t\t\t\t\t\t\t\"backgroundAlign\": \"${backgroundAlign}\",\n\t\t\t\t\t\t\t\"backgroundBlur\": \"${backgroundBlur}\",\n\t\t\t\t\t\t\t\"overlayNoise\": \"${backgroundOverlayNoise}\",\n\t\t\t\t\t\t\t\"colorOverlay\": \"${backgroundColorOverlay}\",\n\t\t\t\t\t\t\t\"overlayGradient\": \"${backgroundOverlayGradient}\",\n\t\t\t\t\t\t\t\"videoAutoPlay\": \"${backgroundVideoAutoPlay}\",\n\t\t\t\t\t\t\t\"videoAudioTrack\": \"${backgroundVideoAudioTrack}\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"AlexaHeader\",\n\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\"headerTitle\": \"${headerTitle}\",\n\t\t\t\t\t\t\t\"headerSubtitle\": \"${headerSubtitle}\",\n\t\t\t\t\t\t\t\"headerAttributionText\": \"${headerAttributionText}\",\n\t\t\t\t\t\t\t\"headerAttributionImage\": \"${headerAttributionImage}\",\n\t\t\t\t\t\t\t\"headerAttributionPrimacy\": \"${headerAttributionPrimacy}\",\n\t\t\t\t\t\t\t\"headerDivider\": \"${headerDivider}\",\n\t\t\t\t\t\t\t\"headerBackButton\": \"${headerBackButton}\",\n\t\t\t\t\t\t\t\"headerBackButtonAccessibilityLabel\": \"${headerBackButtonAccessibilityLabel}\",\n\t\t\t\t\t\t\t\"headerBackButtonCommand\": \"${headerBackButtonCommand}\",\n\t\t\t\t\t\t\t\"headerBackgroundColor\": \"${headerBackgroundColor}\",\n\t\t\t\t\t\t\t\"headerAttributionOpacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\"\n\t\t\t\t\t\t},\n\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\"type\": \"ScrollView\",\n\t\t\t\t\t\t\t\"id\": \"${scrollViewId}\",\n\t\t\t\t\t\t\t\"height\": \"100%\",\n\t\t\t\t\t\t\t\"shrink\": 1,\n\t\t\t\t\t\t\t\"paddingStart\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"paddingEnd\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"paddingLeft\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"paddingRight\": \"@marginHorizontal\",\n\t\t\t\t\t\t\t\"onScroll\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"SetValue\",\n\t\t\t\t\t\t\t\t\t\"componentId\": \"headerdivider\",\n\t\t\t\t\t\t\t\t\t\"property\": \"opacity\",\n\t\t\t\t\t\t\t\t\t\"value\": \"${event.source.position == 0 ? 0 : 1}\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t],\n\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\"type\": \"Container\",\n\t\t\t\t\t\t\t\t\t\"items\": [\n\t\t\t\t\t\t\t\t\t\t{\n\t\t\t\t\t\t\t\t\t\t\t\"type\": \"AlexaDetailContentBlock\",\n\t\t\t\t\t\t\t\t\t\t\t\"theme\": \"${theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerTitle\": \"${headerTitle}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerSubtitle\": \"${headerSubtitle}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionText\": \"${headerAttributionText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionOpacity\": \"${headerAttributionOpacity}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionImage\": \"${headerAttributionImage}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerAttributionPrimacy\": \"${headerAttributionPrimacy}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerDivider\": \"${headerDivider}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackButton\": \"${headerBackButton}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackButtonAccessibilityLabel\": \"${headerBackButtonAccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackButtonCommand\": \"${headerBackButtonCommand}\",\n\t\t\t\t\t\t\t\t\t\t\t\"headerBackgroundColor\": \"${headerBackgroundColor}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotPadding\": \"${ratingSlotPadding}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingSlotMode\": \"${ratingSlotMode}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingGraphicType\": \"${ratingGraphicType}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphicWidth\": \"${singleRatingGraphicWidth}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingNumber\": \"${ratingNumber}\",\n\t\t\t\t\t\t\t\t\t\t\t\"singleRatingGraphic\": \"${singleRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"fullRatingGraphic\": \"${fullRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"halfRatingGraphic\": \"${halfRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"emptyRatingGraphic\": \"${emptyRatingGraphic}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ratingText\": \"${ratingText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"primaryText\": \"${primaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"secondaryText\": \"${secondaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"tertiaryText\": \"${tertiaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"quaternaryText\": \"${quaternaryText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"locationText\": \"${locationText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Theme\": \"${button1Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Theme\": \"${button2Theme}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Text\": \"${button1Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Text\": \"${button2Text}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1Style\": \"${button1Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2Style\": \"${button2Style}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1PrimaryAction\": \"${button1PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2PrimaryAction\": \"${button2PrimaryAction}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button1AccessibilityLabel\": \"${button1AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"button2AccessibilityLabel\": \"${button2AccessibilityLabel}\",\n\t\t\t\t\t\t\t\t\t\t\t\"bodyText\": \"${bodyText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsText\": \"${ingredientsText}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientListItems\": \"${ingredientListItems}\",\n\t\t\t\t\t\t\t\t\t\t\t\"ingredientsHideDivider\": \"${ingredientsHideDivider}\",\n\t\t\t\t\t\t\t\t\t\t\t\"layoutDirection\": \"${layoutDirection}\",\n\t\t\t\t\t\t\t\t\t\t\t\"lang\": \"${lang}\"\n\t\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t\t\t]\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]\n\t\t}\n\t},\n\t\"mainTemplate\": {\n\t\t\"parameters\": [\n\t\t\t\"payload\"\n\t\t],\n\t\t\"items\": [\n\t\t\t{\n\t\t\t\t\"type\": \"AlexaDetail\",\n\t\t\t\t\"id\": \"plantDetail\",\n\t\t\t\t\"detailType\": \"location\",\n\t\t\t\t\"detailImageAlignment\": \"right\",\n\t\t\t\t\"headerTitle\": \"${payload.detailImageRightData.title}\",\n\t\t\t\t\"headerSubtitle\": \"${payload.detailImageRightData.subtitle}\",\n\t\t\t\t\"headerBackButton\": true,\n\t\t\t\t\"headerAttributionImage\": \"${payload.detailImageRightData.logoUrl}\",\n\t\t\t\t\"imageBlurredBackground\": false,\n\t\t\t\t\"imageScale\": \"best-fill\",\n\t\t\t\t\"imageAspectRatio\": \"square\",\n\t\t\t\t\"imageAlignment\": \"right\",\n\t\t\t\t\"imageSource\": \"${payload.detailImageRightData.image.sources[0].url}\",\n\t\t\t\t\"imageCaption\": \"${payload.detailImageRightData.image.contentDescription}\",\n\t\t\t\t\"primaryText\": \"${payload.detailImageRightData.textContent.primaryText.text}\",\n\t\t\t\t\"ratingSlotMode\": \"multiple\",\n\t\t\t\t\"ratingNumber\": \"${payload.detailImageRightData.textContent.rating.number}\",\n\t\t\t\t\"ratingText\": \"${payload.detailImageRightData.textContent.rating.text}\",\n\t\t\t\t\"locationText\": \"${payload.detailImageRightData.textContent.locationText.text}\",\n\t\t\t\t\"secondaryText\": \"${payload.detailImageRightData.textContent.secondaryText.text}\",\n\t\t\t\t\"button1Text\": \"${payload.detailImageRightData.buttons[0].text}\",\n\t\t\t\t\"button2Text\": \"${payload.detailImageRightData.buttons[1].text}\",\n\t\t\t\t\"button1Theme\": \"light\",\n\t\t\t\t\"button2Theme\": \"light\",\n\t\t\t\t\"backgroundImageSource\": \"${payload.detailImageRightData.backgroundImage.sources[0].url}\",\n\t\t\t\t\"theme\": \"light\"\n\t\t\t}\n\t\t]\n\t}\n}",
+            "datasource": "{\n\t\"detailImageRightData\": {\n\t\t\"type\": \"object\",\n\t\t\"objectId\": \"detailImageRightSample\",\n\t\t\"backgroundImage\": {\n\t\t\t\"contentDescription\": null,\n\t\t\t\"smallSourceUrl\": null,\n\t\t\t\"largeSourceUrl\": null,\n\t\t\t\"sources\": [\n\t\t\t\t{\n\t\t\t\t\t\"url\": \"https://i.pinimg.com/originals/65/56/d6/6556d6cb24a912c5e8652165f6d06553.jpg\",\n\t\t\t\t\t\"size\": \"large\"\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"title\": \"Dotinha\",\n\t\t\"subtitle\": \"Kelven Cardoso\",\n\t\t\"image\": {\n\t\t\t\"contentDescription\": \"{hero}\",\n\t\t\t\"smallSourceUrl\": null,\n\t\t\t\"largeSourceUrl\": null,\n\t\t\t\"sources\": [\n\t\t\t\t{\n\t\t\t\t\t\"url\": \"https://steamcdn-a.akamaihd.net/{img}\",\n\t\t\t\t\t\"size\": \"large\"\n\t\t\t\t}\n\t\t\t]\n\t\t},\n\t\t\"textContent\": {\n\t\t\t\"primaryText\": {\n\t\t\t\t\"type\": \"PlainText\",\n\t\t\t\t\"text\": \"Ultima Partida\"\n\t\t\t},\n\t\t\t\"locationText\": {\n\t\t\t\t\"type\": \"PlainText\",\n\t\t\t\t\"text\": \"K / D / A <br /> {kill} / {morte} / {assistencia}<br />Dano Heroi: {dano} <br /> Dano em Torre: {danotorre}\"\n\t\t\t},\n\t\t\t\"secondaryText\": {\n\t\t\t\t\"type\": \"PlainText\",\n\t\t\t\t\"text\": \"LastHits: {lh}\"\n\t\t\t}\n\t\t},\n\t\t\"buttons\": [\n\t\t\t{\n\t\t\t\t\"text\": \"sair\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"text\": \"Detalhes\"\n\t\t\t}\n\t\t],\n\t\t\"logoUrl\": \"https://i.pinimg.com/originals/91/cb/d2/91cbd2a119c998c23309eeebac41ebe9.png\"\n\t}\n}",
+            "aplCommands": "",
+            "jsonFileName": "apl_template_export (18).json",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4ee6a9727117a3f9fc0c0",
+                "id": "61b4e00af35a6fdb0496ff0c"
+              }
+            ]
+          }
+        },
+        "61b4ee6a9727117a3f9fc0c0": {
+          "nodeID": "61b4ee6a9727117a3f9fc0c0",
+          "type": "ifV2",
+          "data": {
+            "expressions": [
+              {
+                "type": "and",
+                "name": "ganhei no iluminado",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "campo"
+                      },
+                      {
+                        "type": "value",
+                        "value": "1"
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "win"
+                      },
+                      {
+                        "type": "value",
+                        "value": "1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "and",
+                "name": "Perdi no iluminado",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "campo"
+                      },
+                      {
+                        "type": "value",
+                        "value": "1"
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "win"
+                      },
+                      {
+                        "type": "value",
+                        "value": "1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "and",
+                "name": "Ganhei no Dire",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "greater",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "campo"
+                      },
+                      {
+                        "type": "value",
+                        "value": "1"
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "win"
+                      },
+                      {
+                        "type": "value",
+                        "value": "1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "and",
+                "name": "Perdi no Dire ",
+                "value": [
+                  {
+                    "logicInterface": "variable",
+                    "type": "greater",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "campo"
+                      },
+                      {
+                        "type": "value",
+                        "value": "1"
+                      }
+                    ]
+                  },
+                  {
+                    "logicInterface": "variable",
+                    "type": "equals",
+                    "value": [
+                      {
+                        "type": "variable",
+                        "value": "win"
+                      },
+                      {
+                        "type": "value",
+                        "value": "0"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "noMatch": {
+              "type": "path",
+              "pathName": ""
+            },
+            "ports": [
+              {
+                "type": "else",
+                "target": "61b41a995ab0ee128ab914e5",
+                "id": "61b4ee6a9727117a3f9fc0c5",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        464.4422619209423,
+                        -73.34826072400328
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        333.4287065676042,
+                        -73.34826072400328
+                      ]
+                    },
+                    {
+                      "point": [
+                        333.4287065676042,
+                        207.52802656292855
+                      ],
+                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61b413be5ab0ee128ab914b2",
+                "id": "61b4ee6a9727117a3f9fc0c1",
+                "data": {
+                  "type": "CURVED",
+                  "points": [
+                    {
+                      "point": [
+                        794.4422527629487,
+                        -229.5982896905184
+                      ]
+                    },
+                    {
+                      "point": [
+                        1028.2753673869722,
+                        -543.6027452569247
+                      ]
+                    }
+                  ],
+                  "event": {
+                    "type": "ganhei no iluminado"
+                  }
+                }
+              },
+              {
+                "type": "",
+                "target": "61b41d1c5ab0ee128ab91531",
+                "id": "61b4ee6a9727117a3f9fc0c2",
+                "data": {
+                  "type": "CURVED",
+                  "event": {
+                    "type": "Perdi no iluminado"
+                  }
+                }
+              },
+              {
+                "type": "",
+                "target": "61b414c45ab0ee128ab914be",
+                "id": "61b4ee6a9727117a3f9fc0c3",
+                "data": {
+                  "type": "CURVED",
+                  "points": [
+                    {
+                      "point": [
+                        794.4422527629487,
+                        -120.59827443172935
+                      ]
+                    },
+                    {
+                      "point": [
+                        1052.0049969035738,
+                        118.9980390448332
+                      ]
+                    }
+                  ],
+                  "event": {
+                    "type": "Ganhei no Dire"
+                  }
+                }
+              },
+              {
+                "type": "",
+                "target": "61b4f13b9727117a3f9fc13b",
+                "id": "61b4ee6a9727117a3f9fc0c4",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        794.4422092173543,
+                        -128.59829129223652
+                      ]
+                    },
+                    {
+                      "point": [
+                        1030.9543455763182,
+                        409.9548992402473
+                      ]
+                    }
+                  ],
+                  "type": "CURVED",
+                  "event": {
+                    "type": "Perdi no Dire "
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "61b4ee6a9727117a3f9fc0bc": {
+          "nodeID": "61b4ee6a9727117a3f9fc0bc",
+          "type": "google_sheets",
+          "data": {
+            "user": {
+              "created_at": "2021-12-11T04:51:18.456Z",
+              "creator_id": 78718,
+              "project_id": null,
+              "platform": "Google Sheets",
+              "user_id": "109378528217755868231",
+              "user_data": {
+                "email": "kelven.pld@gmail.com",
+                "name": "Kelven Cardoso"
+              },
+              "integration_user_id": "gs_int_109378528217755868231",
+              "requires_refresh": null
+            },
+            "sheet": {
+              "value": 1871021640,
+              "label": "heroStats"
+            },
+            "endRow": "",
+            "mapping": [
+              {
+                "arg1": {
+                  "value": 2,
+                  "label": "Column1.localized_name (2)"
+                },
+                "arg2": "hero"
+              },
+              {
+                "arg1": {
+                  "value": 5,
+                  "label": "Column1.img (5)"
+                },
+                "arg2": "img"
+              }
+            ],
+            "startRow": "",
+            "rowNumber": "",
+            "rowValues": [],
+            "matchValue": "{{[hero_id].hero_id}}",
+            "spreadsheet": {
+              "value": "1SzdDP3e75zCJoBTH9xPrk92xXla-VnAeq-u7Xpum-EM",
+              "label": "dotinha"
+            },
+            "headerColumn": {
+              "value": 0,
+              "label": "Column1.id (0)"
+            },
+            "selectedAction": "Retrieve Data",
+            "selectedIntegration": "Google Sheets",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4e00af35a6fdb0496ff0b",
+                "id": "61b4ee6a9727117a3f9fc0be"
+              },
+              {
+                "type": "fail",
+                "target": "61b4e00af35a6fdb0496ff0b",
+                "id": "61b4ee6a9727117a3f9fc0bd"
+              }
+            ]
+          }
+        },
+        "61b4ee6a9727117a3f9fc0b8": {
+          "nodeID": "61b4ee6a9727117a3f9fc0b8",
+          "type": "api",
+          "data": {
+            "url": "https://api.opendota.com/api/players/173968675/recentMatches",
+            "body": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "params": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "method": "GET",
+            "headers": [
+              {
+                "key": "",
+                "val": ""
+              }
+            ],
+            "content": "",
+            "mappings": [
+              {
+                "path": "response.0.hero_id",
+                "var": "hero_id"
+              },
+              {
+                "path": "response.0.kills",
+                "var": "kill"
+              },
+              {
+                "path": "response.0.deaths",
+                "var": "morte"
+              },
+              {
+                "path": "response.0.assists",
+                "var": "assistencia"
+              },
+              {
+                "path": "response.0.player_slot",
+                "var": "campo"
+              },
+              {
+                "path": "response.0.radiant_win",
+                "var": "win"
+              },
+              {
+                "path": "response.0.skill",
+                "var": "user_id"
+              },
+              {
+                "path": "response.0.hero_damage",
+                "var": "dano"
+              },
+              {
+                "path": "response.0.last_hits",
+                "var": "lh"
+              },
+              {
+                "path": "response.0.tower_damage",
+                "var": "danotorre"
+              }
+            ],
+            "bodyType": "formData",
+            "selectedAction": "Make a GET Request",
+            "selectedIntegration": "Custom API",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4ee6a9727117a3f9fc0bc",
+                "id": "61b4ee6a9727117a3f9fc0ba"
+              },
+              {
+                "type": "fail",
+                "target": "61b4ee6a9727117a3f9fc0bc",
+                "id": "61b4ee6a9727117a3f9fc0b9"
+              }
+            ]
+          }
+        },
+        "61b4ee6a9727117a3f9fc0b6": {
+          "nodeID": "61b4ee6a9727117a3f9fc0b6",
+          "type": "block",
+          "coords": [
+            629.4422658796177,
+            -499.84827157140614
+          ],
+          "data": {
+            "name": "Ultima partida",
+            "color": "standard",
+            "steps": [
+              "61b4ee6a9727117a3f9fc0b8",
+              "61b4ee6a9727117a3f9fc0bc",
+              "61b4e00af35a6fdb0496ff0b",
+              "61b4ee6a9727117a3f9fc0c0"
+            ]
+          }
+        },
+        "61b4f13b9727117a3f9fc13d": {
+          "nodeID": "61b4f13b9727117a3f9fc13d",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Camila",
+                "content": "Minha ultima partida foi Derrota no lado dos Temidos com heroi {{[hero].hero}}, e matei {{[kill].kill}}. morrir {{[morte].morte}}, e ajudei a matar {{[assistencia].assistencia}} "
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4f26a9727117a3f9fc178",
+                "id": "61b4f13b9727117a3f9fc13e",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1360.954353879893,
+                        504.7048967735664
+                      ]
+                    },
+                    {
+                      "point": [
+                        1458.7479423714797,
+                        504.7048967735664
+                      ]
+                    },
+                    {
+                      "point": [
+                        1458.7479423714797,
+                        -227.18847011345323
+                      ]
+                    },
+                    {
+                      "point": [
+                        1556.5415308630663,
+                        -227.18847011345323
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61b4f13b9727117a3f9fc13b": {
+          "nodeID": "61b4f13b9727117a3f9fc13b",
+          "type": "block",
+          "coords": [
+            1195.9543422448103,
+            378.9549247205375
+          ],
+          "data": {
+            "name": "Perdi Dire",
+            "color": "red",
+            "steps": [
+              "61b4f13b9727117a3f9fc13d"
+            ]
+          }
+        },
+        "61b4f26a9727117a3f9fc175": {
+          "nodeID": "61b4f26a9727117a3f9fc175",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Vitoria",
+                "content": "Quer mais detalhes?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4f2869727117a3f9fc180",
+                "id": "61b4f26a9727117a3f9fc177"
+              }
+            ]
+          }
+        },
+        "61b4f26a9727117a3f9fc178": {
+          "nodeID": "61b4f26a9727117a3f9fc178",
+          "type": "block",
+          "coords": [
+            1721.541530863066,
+            -258.1884607234292
+          ],
+          "data": {
+            "name": "New Block 7",
+            "color": "standard",
+            "steps": [
+              "61b4f26a9727117a3f9fc175",
+              "61b4f2869727117a3f9fc180"
+            ]
+          }
+        },
+        "61b4f2869727117a3f9fc180": {
+          "nodeID": "61b4f2869727117a3f9fc180",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "choices": [
+              {
+                "intent": "AMAZON.NoIntent",
+                "action": "PATH",
+                "mappings": []
+              },
+              {
+                "intent": "AMAZON.YesIntent",
+                "action": "PATH",
+                "mappings": []
+              }
+            ],
+            "noMatch": {
+              "types": [],
+              "pathName": "No Match",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Vitoria",
+                  "content": ""
+                }
+              ]
+            },
+            "noReply": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "else",
+                "target": null,
+                "id": "61b4f2869727117a3f9fc184"
+              },
+              {
+                "type": "",
+                "target": "61b4f29d9727117a3f9fc18f",
+                "id": "61b4f2869727117a3f9fc183",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1886.541418182778,
+                        -114.93847011345319
+                      ]
+                    },
+                    {
+                      "point": [
+                        2012.6953206767676,
+                        -114.93847011345319
+                      ]
+                    },
+                    {
+                      "point": [
+                        2012.6953206767676,
+                        -237.30392045900604
+                      ]
+                    },
+                    {
+                      "point": [
+                        2138.8492231707573,
+                        -237.30392045900604
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "",
+                "target": "61b4f3629727117a3f9fc1b3",
+                "id": "61b4f35b9727117a3f9fc1ae",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1886.5414533953672,
+                        -60.438450746528645
+                      ]
+                    },
+                    {
+                      "point": [
+                        1920.6323930038538,
+                        -60.438450746528645
+                      ]
+                    },
+                    {
+                      "point": [
+                        1920.6323930038538,
+                        235.83252592694436
+                      ],
+                      "toTop": true,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61b4f29d9727117a3f9fc18c": {
+          "nodeID": "61b4f29d9727117a3f9fc18c",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Vitoria",
+                "content": "Ok, Até a proxima!"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4f3359727117a3f9fc19e",
+                "id": "61b4f29d9727117a3f9fc18e"
+              }
+            ]
+          }
+        },
+        "61b4f29d9727117a3f9fc18f": {
+          "nodeID": "61b4f29d9727117a3f9fc18f",
+          "type": "block",
+          "coords": [
+            2303.849223170758,
+            -268.3038453388138
+          ],
+          "data": {
+            "name": "New Block 8",
+            "color": "standard",
+            "steps": [
+              "61b4f29d9727117a3f9fc18c",
+              "61b4f3359727117a3f9fc19e",
+              "61b4f2a29727117a3f9fc197"
+            ]
+          }
+        },
+        "61b4f2a29727117a3f9fc197": {
+          "nodeID": "61b4f2a29727117a3f9fc197",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        },
+        "61b4f3359727117a3f9fc19e": {
+          "nodeID": "61b4f3359727117a3f9fc19e",
+          "type": "display",
+          "data": {
+            "type": "SPLASH",
+            "title": "",
+            "imageURL": "https://s3.amazonaws.com/com.getstoryflow.api.images/1639248699133-hqdefault.jpg",
+            "document": "",
+            "datasource": "",
+            "jsonFileName": "",
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4f2a29727117a3f9fc197",
+                "id": "61b4f3359727117a3f9fc1a1"
+              }
+            ]
+          }
+        },
+        "61b4f3629727117a3f9fc1b0": {
+          "nodeID": "61b4f3629727117a3f9fc1b0",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Vitoria",
+                "content": "Calma que ainda estou em Desenvolvimento"
+              }
+            ],
+            "ports": [
+              {
+                "type": "next",
+                "target": "61b4f26a9727117a3f9fc178",
+                "id": "61b4f3629727117a3f9fc1b2",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        1755.6323564699414,
+                        328.83252036155267
+                      ],
+                      "reversed": true
+                    },
+                    {
+                      "point": [
+                        1731.6323564699414,
+                        328.83252036155267
+                      ]
+                    },
+                    {
+                      "point": [
+                        1731.6323564699414,
+                        42.640205626726754
+                      ]
+                    },
+                    {
+                      "point": [
+                        1526.9261462476816,
+                        42.640205626726754
+                      ],
+                      "locked": true
+                    },
+                    {
+                      "point": [
+                        1526.9261462476816,
+                        -227.1883980510897
+                      ],
+                      "locked": true
+                    },
+                    {
+                      "point": [
+                        1556.5414917682367,
+                        -227.1883980510897
+                      ],
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "61b4f3629727117a3f9fc1b3": {
+          "nodeID": "61b4f3629727117a3f9fc1b3",
+          "type": "block",
+          "coords": [
+            1920.6324399539753,
+            236.83251829755005
+          ],
+          "data": {
+            "name": "New Block 9",
+            "color": "standard",
+            "steps": [
+              "61b4f3629727117a3f9fc1b0"
+            ]
+          }
+        }
+      },
+      "children": [
+        "61b38fbf93cd150007c78218",
+        "61b38fbf93cd150007c78219"
+      ],
+      "versionID": "61b38fbf93cd150007c78216",
+      "creatorID": 78718,
+      "modified": 1647824147,
+      "intentStepIDs": [
+        "61b3a8367b1e62e9c8aedee2",
+        "61b3f0865ab0ee128ab9141b",
+        "61b42e025ab0ee128ab915ac"
+      ]
+    },
+    "61b38fbf93cd150007c78218": {
+      "_id": "61b38fbf93cd150007c78218",
+      "name": "Help User",
+      "offsetX": 272,
+      "offsetY": 104,
+      "zoom": 76.41405779564307,
+      "variables": [],
+      "nodes": {
+        "5f9f562f11b31520c2a2a6e1": {
+          "nodeID": "5f9f562f11b31520c2a2a6e1",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f562f11b31520c2a2a6e3",
+                "id": "5fde75904a001a20aa671626"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "5f9f562f11b31520c2a2a6e3": {
+          "nodeID": "5f9f562f11b31520c2a2a6e3",
+          "type": "block",
+          "coords": [
+            808.6506721313523,
+            121.24568139701532
+          ],
+          "data": {
+            "name": "Help Message",
+            "color": "standard",
+            "steps": [
+              "60b7e6f5d4b17f0ce7bddeb6",
+              "5f9f562f11b31520c2a2a6e4"
+            ]
+          }
+        },
+        "5f9f562f11b31520c2a2a6e4": {
+          "nodeID": "5f9f562f11b31520c2a2a6e4",
+          "type": "interaction",
+          "data": {
+            "name": "Choice",
+            "else": {
+              "type": "reprompt",
+              "randomize": false,
+              "reprompts": [
+                {
+                  "voice": "Alexa",
+                  "content": "Do you want to continue?"
+                },
+                {
+                  "voice": "Alexa",
+                  "content": "Please say yes or no."
+                }
+              ]
+            },
+            "choices": [
+              {
+                "intent": "AMAZON.YesIntent",
+                "mappings": []
+              },
+              {
+                "intent": "AMAZON.NoIntent",
+                "mappings": []
+              }
+            ],
+            "reprompt": null,
+            "chips": null,
+            "buttons": null,
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "5fde75904a001a20aa671628"
+              },
+              {
+                "type": "",
+                "target": null,
+                "id": "5fde75904a001a20aa671629"
+              },
+              {
+                "type": 2,
+                "target": "5f9f562f11b31520c2a2a6e6",
+                "id": "5fde75904a001a20aa67162a",
+                "data": {
+                  "points": [
+                    {
+                      "point": [
+                        973.6507263819777,
+                        339.2456505209935
+                      ],
+                      "toTop": false,
+                      "locked": false,
+                      "reversed": false,
+                      "allowedToTop": false
+                    },
+                    {
+                      "point": [
+                        1051.8287345472486,
+                        339.2456505209935
+                      ],
+                      "toTop": false,
+                      "locked": false,
+                      "reversed": false,
+                      "allowedToTop": false
+                    },
+                    {
+                      "point": [
+                        1051.8287345472486,
+                        439.4923656273935
+                      ],
+                      "toTop": false,
+                      "locked": false,
+                      "reversed": false,
+                      "allowedToTop": false
+                    },
+                    {
+                      "point": [
+                        1130.0067427125193,
+                        439.4923656273935
+                      ],
+                      "toTop": false,
+                      "locked": false,
+                      "reversed": false,
+                      "allowedToTop": true
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "5f9f562f11b31520c2a2a6e5": {
+          "nodeID": "5f9f562f11b31520c2a2a6e5",
+          "type": "exit",
+          "data": {
+            "ports": []
+          }
+        },
+        "5f9f562f11b31520c2a2a6e6": {
+          "nodeID": "5f9f562f11b31520c2a2a6e6",
+          "type": "block",
+          "coords": [
+            1295.0066750587603,
+            408.4923354011805
+          ],
+          "data": {
+            "name": "Exit",
+            "color": "red",
+            "steps": [
+              "60b7e708d4b17f0ce7bddebe",
+              "5f9f562f11b31520c2a2a6e5"
+            ]
+          }
+        },
+        "60b7e6f5d4b17f0ce7bddeb6": {
+          "nodeID": "60b7e6f5d4b17f0ce7bddeb6",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "You said help. Do you want to continue?"
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f562f11b31520c2a2a6e4",
+                "id": "60b7e6f5d4b17f0ce7bddeb9"
+              }
+            ]
+          }
+        },
+        "60b7e708d4b17f0ce7bddebe": {
+          "nodeID": "60b7e708d4b17f0ce7bddebe",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Bye for now."
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f562f11b31520c2a2a6e5",
+                "id": "60b7e708d4b17f0ce7bddec1"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "versionID": "61b38fbf93cd150007c78216",
+      "creatorID": 78718,
+      "modified": 1639157695
+    },
+    "61b38fbf93cd150007c78219": {
+      "_id": "61b38fbf93cd150007c78219",
+      "name": "End Session",
+      "offsetX": 272,
+      "offsetY": 104,
+      "zoom": 65.1314968611385,
+      "variables": [],
+      "nodes": {
+        "5f9f562f11b31520c2a2a6e7": {
+          "nodeID": "5f9f562f11b31520c2a2a6e7",
+          "type": "start",
+          "coords": [
+            360,
+            120
+          ],
+          "data": {
+            "name": "Start",
+            "color": "standard",
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f562f11b31520c2a2a6e9",
+                "id": "5fde6fe15bc1c56319fad3b2"
+              }
+            ],
+            "steps": []
+          }
+        },
+        "5f9f562f11b31520c2a2a6e9": {
+          "nodeID": "5f9f562f11b31520c2a2a6e9",
+          "type": "block",
+          "coords": [
+            805.9688890631405,
+            120.94792332948695
+          ],
+          "data": {
+            "name": "Exit",
+            "color": "red",
+            "steps": [
+              "60b7e6e1d4b17f0ce7bdde9c",
+              "5f9f562f11b31520c2a2a6ea"
+            ]
+          }
+        },
+        "5f9f562f11b31520c2a2a6ea": {
+          "nodeID": "5f9f562f11b31520c2a2a6ea",
+          "type": "exit",
+          "data": {
+            "ports": [
+              {
+                "type": "",
+                "target": null,
+                "id": "5fde6fe15bc1c56319fad3b4"
+              }
+            ]
+          }
+        },
+        "60b7e6e1d4b17f0ce7bdde9c": {
+          "nodeID": "60b7e6e1d4b17f0ce7bdde9c",
+          "type": "speak",
+          "data": {
+            "randomize": true,
+            "canvasVisibility": "preview",
+            "dialogs": [
+              {
+                "voice": "Alexa",
+                "content": "Okay, this session is now ending."
+              }
+            ],
+            "ports": [
+              {
+                "type": "",
+                "target": "5f9f562f11b31520c2a2a6ea",
+                "id": "60b7e6e1d4b17f0ce7bdde9f"
+              }
+            ]
+          }
+        }
+      },
+      "children": [],
+      "versionID": "61b38fbf93cd150007c78216",
+      "creatorID": 78718,
+      "modified": 1639157695
+    }
+  },
+  "variableStates": []
+}
